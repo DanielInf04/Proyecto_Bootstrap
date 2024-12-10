@@ -181,6 +181,8 @@ img.rounded {
 }
 
 .card:hover {
+    background-color: rgb(6, 55, 128);
+    color: white;
     transform: translateY(-5px); /* Eleva ligeramente la card */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Agrega sombra más intensa */
     transition: all 0.3s ease; /* Transición suave */
