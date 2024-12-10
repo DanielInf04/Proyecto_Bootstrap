@@ -1,0 +1,230 @@
+/* Barra de navegación */
+.navbar {
+    /*background-color: transparent;*/ /* Fondo blanco semitransparente */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    backdrop-filter: blur(5px);  /* Fondo difuso cuando se hace scroll */
+}
+
+/* Menú de navegación */
+.navbar-nav {
+    font-weight: bold;
+    gap: 2rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+    color: #0056b3;
+}
+
+/* Estilos generales */
+
+.seccion-clara {
+    color: black;
+    background-color: white;
+}
+
+.seccion-oscura {
+    color: white;
+    background-color: #1b1b32;
+}
+
+/* Seccion Hero */
+
+.hero {
+    background-image: url('../img/fondo_ushuaia.jpg'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding-top: 70px;
+}
+
+/* Efecto de desenfoque (blur) en el fondo */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); /* Aplica el efecto de desenfoque */
+    z-index: 0; /* Asegura que el fondo esté por debajo del contenido */
+}
+
+.hero-principal {
+    z-index: 1; /* Hace que el contenido esté por encima del fondo desenfocado */
+    padding: 2rem;
+    max-width: 800px;
+}
+
+/* Estilo del título (h1) */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    z-index: 1; /* Asegura que el texto esté por encima del fondo */
+}
+
+/* Estilo del subtítulo (h2) */
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    z-index: 1; /* Asegura que el texto esté por encima del fondo */
+}
+
+/* Estilo de texto cuando se hace scroll */
+.hero-principal h1,
+.hero-principal h2 {
+    animation: fadeIn 2s ease-out;
+}
+
+.btn-custom {
+    background-color: #0056b3; /* Azul oscuro */
+    color: white; /* Texto en blanco */
+    font-weight: bold; /* Negrita */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 12px 30px; /* Mayor tamaño y padding */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover: cambio de color y sombra */
+.btn-custom:hover {
+    background-color: #00aaff; /* Cambio a un azul más claro al hacer hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+    transform: translateY(-3px); /* Pequeño movimiento hacia arriba */
+}
+
+/* Efecto active: cuando se hace clic */
+.btn-custom:active {
+    background-color: #0056b3; /* Vuelve al color original */
+    transform: translateY(1px); /* Desplazamiento hacia abajo */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+}
+
+/* Historia */
+
+#historia {
+    padding-top: 140px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+
+.historia {
+    /*margin: 2rem;*/
+    padding: 10px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+  
+img.rounded {
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+.columna {
+    padding: 20px;
+}
+
+/* Carousel */
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Asegura que la imagen cubra el espacio sin deformarse */
+    max-height: 600px;  /* Limita la altura de las imágenes */
+  }
+  
+  /* Mejora de la apariencia del caption */
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo oscuro translúcido para mejorar la legibilidad */
+    border-radius: 15px;
+    padding: 15px;
+    color: white;  /* Asegura que el texto sea blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);  /* Añade una sombra sutil para resaltar el caption */
+    backdrop-filter: blur(5px);  /* Fondo desenfocado para un mejor contraste */
+  }
+  
+  .carousel-indicators button {
+    background-color: #fff;  /* Botones de los indicadores en blanco */
+  }
+  
+/* Turismo */
+.turismo {
+    padding: 20px;
+}
+
+.turismo .container .row {
+    margin: 2rem;
+}
+
+.card {
+    margin-bottom: 20px; /* Espacio entre las cards */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    min-width: 250px;
+    min-height: 350px;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva ligeramente la card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Agrega sombra más intensa */
+    transition: all 0.3s ease; /* Transición suave */
+}
+  
+.card img {
+    border-radius: 15px 15px 0 0; /* Bordes redondeados en la imagen */
+  }
+
+.card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la card */
+    height: 200px; /* Ajusta la altura a un valor fijo */
+    object-fit: cover; /* Hace que la imagen se recorte para llenar el contenedor sin distorsionarse */
+}
+  
+.card-body {
+    text-align: center;
+}
+
+/* Adaptable (Responsivo) */
+
+@media screen and (max-width: 1200px) {
+    .columna img {
+        width: 300px;
+    }
+    .carousel-caption p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .columna img {
+        width: 400px;
+    }
+
+}
+@media screen and (max-width: 767px) {
+    .carousel-caption {
+        padding: 0;
+    }
+    .carousel-caption h5 {
+        font-size: 14px;
+    }
+    .carousel-caption p {
+        display: none;
+    }
+}

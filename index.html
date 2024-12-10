@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Daniel Matviiv">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubre Ushuaia</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Iconos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Sección Hero -->
+  <header id="inicio" class="hero d-flex align-items-stretch">
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid d-flex align-items-center">
+      <!-- Logo a la izquierda -->
+      <a class="navbar-brand" href="#">
+        <img src="img/logo_sinfondo.png" width="110" alt="Logo de Ushuaia">
+      </a>
+      <!-- Botón de toggler (solo visible en pantallas pequeñas) -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto"> <!-- Centrar menú con mx-auto -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#historia">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#turismo">Turismo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#comida">Comida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal de la sección Hero -->
+  <div class="hero-principal d-flex flex-column justify-content-center align-items-center text-white">
+    <h1>¡Bienvenidos al Fin del Mundo!</h1>
+    <h2>Ushuaia, la última ciudad antes de la Antártida, donde la naturaleza y la aventura se encuentran.</h2> <!-- Agregué un subtítulo de ejemplo -->
+    <button type="button" class="btn btn-primary btn-custom btn-lg mt-4" onclick="window.location.href='#historia'">Descubre Ushuaia</button>
+  </div>
+  </header>
+
+  <!-- Sección Historia -->
+  <section id="historia" class="historia seccion-clara">
+    <h2 class="text-center">Historia de Ushuaia</h2>
+    <div class="container">
+      <!-- Historia -->
+       <div class="row">
+        <div class="columna col-12 col-lg-8">
+          <p>Ushuaia, conocida como "la ciudad del fin del mundo," está ubicada en el extremo sur de la Isla Grande de Tierra del Fuego, Argentina. Su historia combina elementos indígenas, exploraciones europeas y desarrollos modernos, lo que la convierte en un destino fascinante.</p>
+          <h3>Los primeros habitantes: los yámanas</h3>
+          <p>Mucho antes de la llegada de los europeos, los yámanas (o yaganes) habitaron esta región durante más de 6,000 años. Este pueblo indígena nómada se adaptó de manera asombrosa a las condiciones adversas de Tierra del Fuego. Vivían en pequeñas canoas hechas de corteza de árbol, navegando por los canales y recolectando mariscos, peces y caza menor para su sustento.</p>
+          <p>Los yámanas eran expertos en sobrevivir al frío extremo, utilizando grasa animal y fogatas tanto en las costas como en sus embarcaciones. A pesar del clima hostil, mantenían un estilo de vida íntimamente conectado con la naturaleza. El nombre “Ushuaia” proviene de su lengua y significa "bahía que penetra hacia el poniente," reflejando la geografía del lugar que habitaban.</p>
+        </div>
+        <div class="columna col-12 col-lg-4 d-flex align-items-center justify-content-center">
+          <img src="img/Pueblo_Yamana,_Cabo_de_Hornos_1883.jpg" alt="" width="400px">
+        </div>
+       </div>
+       <div class="row">
+        <div class="columna col-12 col-lg-4 d-flex align-items-center justify-content-center">
+          <img src="img/fundacion_ushuaia.jpg" alt="" width="400px">
+        </div>
+        <div class="columna col-12 col-lg-8">
+          <h3>Fundación de Ushuaia</h3>
+          <p>El primer asentamiento permanente en Ushuaia fue establecido en 1869 por misioneros anglicanos liderados por Thomas Bridges, quien aprendió el idioma yámana y tradujo parte de la Biblia a su lengua. Bridges fundó una misión en la bahía de Ushuaia con el objetivo de evangelizar a los nativos. Aunque los misioneros buscaron proteger a los yámanas, también contribuyeron al desmantelamiento de su cultura ancestral.</p>
+          <p>En 1884, la Armada Argentina creó una subprefectura en Ushuaia, consolidando la soberanía del país sobre la región en un contexto de disputas territoriales con Chile. Esta presencia estatal marcó el inicio de la expansión argentina en Tierra del Fuego. Para ese entonces, la población indígena ya había sido drásticamente reducida debido a enfermedades traídas por los europeos y el impacto de la colonización.</p>
+        </div>
+       </div>
+       <div class="row">
+        <div class="columna col-12">
+          <h3 class="mb-4 text-center">El presidio y la transformación de Ushuaia</h3>
+          <p>
+            A principios del siglo XX, Ushuaia experimentó un cambio significativo con la construcción de un presidio de máxima seguridad destinado a los reclusos más peligrosos del país. Este penal no solo cumplía una función carcelaria, sino que también fue clave en el desarrollo urbano de la ciudad. Los presos trabajaban en la tala de bosques, construcción de caminos y edificios, actividades que dejaron una huella imborrable en la infraestructura de Ushuaia. El presidio, que funcionó hasta 1947, se ha convertido en un museo emblemático que narra esta peculiar etapa de la historia local.
+            En las décadas posteriores, Ushuaia pasó de ser un pequeño puerto aislado a convertirse en un centro estratégico y un imán para el turismo internacional. La ciudad es hoy conocida como la puerta de entrada a la Antártida, recibiendo expediciones científicas y cruceros que la conectan con los paisajes más remotos del planeta. Además, su oferta turística incluye actividades como esquí, trekking y navegación, atrayendo a miles de visitantes anualmente. Esta transformación refleja cómo Ushuaia ha combinado su historia única con un desarrollo moderno que la posiciona como una joya en el fin del mundo.
+          </p>
+
+        </div>
+        <!-- Carrousel -->
+        <div class="columna col-12 col-lg-9 d-flex align-items-center justify-content-center mx-auto">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/Carousel/imagen1.jpg" class="d-block w-100" alt="Ushuaia desde las alturas">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Ushuaia desde las alturas</h5>
+                  <p>Desde el Cerro Martial, los visitantes pueden admirar una de las vistas más impresionantes de Ushuaia. La ciudad se extiende a lo largo de la costa, rodeada por los majestuosos Andes Fueguinos y las aguas del Canal Beagle, un paisaje único que marca el final del continente.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/Carousel/imagen2.jpg" class="d-block w-100" alt="Puerta de entrada a la Antártida">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Puerta de entrada a la Antártida</h5>
+                  <p>El puerto de Ushuaia es conocido como la 'puerta de la Antártida', recibiendo diariamente cruceros y expediciones científicas. Su ubicación estratégica convierte a Ushuaia en el punto de partida para los viajeros que se aventuran hacia el continente blanco.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/Carousel/imagen3.jpg" class="d-block w-100" alt="El encanto de la ciudad en invierno">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>El encanto de la ciudad en invierno</h5>
+                  <p>Durante el invierno, Ushuaia se transforma en un destino de nieve, donde sus calles se llenan de vida con actividades de invierno como el esquí, el snowboard y los paseos en trineo. La ciudad se convierte en un paraíso blanco rodeado por paisajes de ensueño.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Controles de navegación -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+       </div>
+    </div>
+  </section>
+
+  <section id="turismo" class="historia seccion-oscura">
+    <h2 class="text-center mt-4 mb-5">Atractivos Turísticos</h2>
+    <div class="container">
+      <div class="row">
+        <!-- Columna 1 con card -->
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <img src="img/Atractivos Turisticos/imagen1.jpg" class="card-img-top" alt="Atractivo 1">
+            <div class="card-body">
+              <h5 class="card-title">Parque Nacional Tierra del Fuego</h5>
+              <p class="card-text">Explora los impresionantes senderos del Parque Nacional Tierra del Fuego.</p>
+              <a href="#" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Columna 2 con card -->
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <img src="img/Atractivos Turisticos/imagen2.jpg" class="card-img-top" alt="Atractivo 2">
+            <div class="card-body">
+              <h5 class="card-title">Ciudad de Ushuaia</h5>
+              <p class="card-text">Descubre la ciudad más austral del mundo, llena de historia y belleza natural.</p>
+              <a href="#" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Columna 3 con card -->
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <img src="img/Atractivos Turisticos/imagen3.jpg" class="card-img-top" alt="Atractivo 3">
+            <div class="card-body">
+              <h5 class="card-title">Circuito de los Valles</h5>
+              <p class="card-text">Recorre los hermosos valles de Ushuaia y disfruta de paisajes espectaculares.</p>
+              <a href="#" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 4 con card -->
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <img src="img/Atractivos Turisticos/imagen4.jpg" class="card-img-top" alt="Atractivo 3">
+            <div class="card-body">
+              <h5 class="card-title">Canal Beagle</h5>
+              <p class="card-text">Navega por el Canal Beagle y disfruta de su impresionante fauna marina.</p>
+              <a href="#" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 5 con card -->
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <img src="img/Atractivos Turisticos/imagen5.jpg" class="card-img-top" alt="Atractivo 3">
+            <div class="card-body">
+              <h5 class="card-title">Lagos y Tolhuin</h5>
+              <p class="card-text">Disfruta de los paisajes serenos y las aguas cristalinas de Tolhuin.</p>
+              <a href="#" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 6 con card -->
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <img src="img/Atractivos Turisticos/imagen6.jpeg" class="card-img-top" alt="Atractivo 3">
+            <div class="card-body">
+              <h5 class="card-title">Antártida</h5>
+              <p class="card-text">Vive la experiencia única de explorar el continente más remoto del planeta.</p>
+              <a href="#" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
