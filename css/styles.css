@@ -53,7 +53,7 @@
 }
 
 /* Efecto de desenfoque (blur) en el fondo */
-.hero::before {
+.hero::before, .hero_galery::before {
     content: "";
     position: absolute;
     top: 0;
@@ -64,6 +64,21 @@
     z-index: 0; /* Asegura que el fondo esté por debajo del contenido */
 }
 
+.hero_galery {
+    background-image: url('../img/galeria_imagenes.jpeg'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding-top: 70px;
+}
+
 .hero-principal {
     z-index: 1; /* Hace que el contenido esté por encima del fondo desenfocado */
     padding: 2rem;
@@ -71,7 +86,7 @@
 }
 
 /* Estilo del título (h1) */
-.hero h1 {
+.hero h1, .hero_galery h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -79,7 +94,7 @@
 }
 
 /* Estilo del subtítulo (h2) */
-.hero h2 {
+.hero h2, .hero_galery h2 {
     font-size: 1.5rem;
     font-weight: lighter;
     z-index: 1; /* Asegura que el texto esté por encima del fondo */
@@ -202,6 +217,106 @@ img.rounded {
     text-align: center;
 }
 
+/* Pie de pagina (footer) */
+
+footer {
+    min-height: 500px;
+}
+
+.footer-logo {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+}
+
+.footer-texto {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.iconos-redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i {
+    color: black;
+}
+
+.derechos-de-autor {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
+/* Footer */
+
+footer {
+    background: linear-gradient(135deg, #1b1b32, #33354a); /* Fondo degradado */
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+footer a {
+    color: white; /* Color por defecto */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Colores específicos para cada red social */
+footer .bi-facebook {
+    color: #4267B2; /* Azul de Facebook */
+}
+
+footer .bi-instagram {
+    color: #C13584; /* Rosa de Instagram */
+}
+
+footer .bi-twitter-x {
+    color: #1DA1F2; /* Azul de Twitter */
+}
+
+footer .bi-youtube {
+    color: #FF0000; /* Rojo de YouTube */
+}
+
+/* Hover genérico para todos los íconos */
+footer .bi:hover {
+    color: #00aaff; /* Azul para hover */
+    transform: scale(1.1); /* Ligera animación */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Galería de imágenes */
+
 /* Adaptable (Responsivo) */
 
 @media screen and (max-width: 1200px) {
@@ -229,4 +344,10 @@ img.rounded {
     .carousel-caption p {
         display: none;
     }
+    .logo_footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
