@@ -6,7 +6,6 @@
     backdrop-filter: blur(5px);  /* Fondo difuso cuando se hace scroll */
 }
 
-/* Menú de navegación */
 .navbar-nav {
     font-weight: bold;
     gap: 2rem;
@@ -21,6 +20,11 @@
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item .nav-link.active {
     color: #0056b3;
+}
+
+/* Para corregir la visualizacion del contenido al presionar un enlace */
+html {
+    scroll-padding-top: 114px;
 }
 
 /* Estilos generales */
@@ -131,9 +135,9 @@
 
 /* Historia */
 
-#historia {
-    padding-top: 140px; /* Ajusta este valor según la altura de tu barra de navegación */
-}
+/*#historia {
+    padding-top: 140px; /* Ajusta este valor según la altura de tu barra de navegación 
+}*/
 
 .historia {
     /*margin: 2rem;*/
