@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+          <div class="card shadow-lg border-0 bg-primary text-white">
+            <div class="card-body">
+              <h3 class="card-title text-center mb-4">Formulario de Contacto</h3>
+              <form id="contact-form" onsubmit="return showToast()">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Tu Nombre Completo</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" value="Juan Pérez" required placeholder="Escribe tu nombre completo">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Tu Correo Electrónico</label>
+                  <input type="email" class="form-control" id="email" name="email" value="juanperez@mail.com" required placeholder="Escribe tu correo electrónico">
+                </div>
+                <button type="submit" class="btn btn-light w-100">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast (mensaje emergente) -->
+  <div class="toast-container position-fixed bottom-0 start-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="display: none;">
+      <div class="toast-header">
+        <strong class="me-auto">Formulario enviado</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        ¡Gracias por ponerte en contacto! Recibimos tu mensaje.
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Función para mostrar el Toast
+    function showToast() {
+      var toast = new bootstrap.Toast(document.getElementById('liveToast'));
+      toast.show();  // Muestra el toast
+      return false;  // Evita que el formulario se envíe de forma predeterminada
+    }
+  </script>
+</body>
+</html>
