@@ -22,6 +22,7 @@
 
   <!-- Javascript -->
    <script src="./js/link.js"></script>
+   <script src="./js/utils.js"></script>
 </head>
 <body>
   <!-- Sección Hero -->
@@ -309,48 +310,96 @@
 
         <!-- Sección Preguntas Frecuentes (FAQ) -->
         <div class="row mb-4">
-            <div class="col-12">
-                <h5 class="text-uppercase">Preguntas Frecuentes</h5>
-                <div class="accordion" id="accordionFAQ">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq1">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent1" aria-expanded="true" aria-controls="faqContent1">
-                                ¿Qué hacer en Ushuaia?
-                            </button>
-                        </h2>
-                        <div id="faqContent1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
-                                Ushuaia ofrece una variedad de actividades como trekking, paseos en barco, visitas a museos y mucho más.
-                            </div>
+          <div class="col-12">
+              <h5 class="text-uppercase">Preguntas Frecuentes</h5>
+              <div class="accordion" id="accordionFAQ">
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="faq1">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent1" aria-expanded="true" aria-controls="faqContent1">
+                              ¿Qué hacer en Ushuaia?
+                          </button>
+                      </h2>
+                      <div id="faqContent1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                          Ushuaia ofrece una vasta cantidad de actividades para todos los gustos, tanto para los amantes de la naturaleza como para los que buscan aventura y cultura. Aquí tienes algunas de las actividades más destacadas:
+                          
+                          <ul style="list-style: none; padding: 0; margin: 0;">
+                              <li style="margin-bottom: 10px;">
+                                  <strong>🚢 Navegación por el Canal Beagle:</strong>  
+                                  Un paseo en barco donde podrás disfrutar de la belleza del paisaje, avistar fauna marina como lobos marinos y pingüinos, y admirar el famoso faro Les Éclaireurs.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>🌳 Parque Nacional Tierra del Fuego:</strong>  
+                                  Explora sus increíbles senderos rodeados de bosques, montañas y lagos. Este parque es ideal para los amantes del trekking, donde podrás disfrutar de paisajes que parecen sacados de otro mundo.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>⛰️ Trekking al Glaciar Martial:</strong>  
+                                  Una caminata que te llevará a lo alto de la montaña para ofrecerte vistas impresionantes de la ciudad de Ushuaia, el Canal Beagle y la cordillera de los Andes.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>🚂 Tren del Fin del Mundo:</strong>  
+                                  Recorre la histórica ruta que utilizaban los presos de la antigua prisión de Ushuaia. Disfruta del paisaje patagónico y aprende sobre la historia de este importante ferrocarril.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>🏛️ Museo Marítimo y del Presidio:</strong>  
+                                  Un lugar clave para conocer la historia de Ushuaia, desde la época de los pueblos originarios hasta el uso del presidio como centro de detención. Es una parada obligatoria para los amantes de la historia.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>❄️ Actividades invernales:</strong>  
+                                  Si visitas Ushuaia en invierno, tendrás la oportunidad de disfrutar de actividades como esquí, snowboard, caminatas con raquetas y paseos en trineo tirado por perros huskies. La nieve transforma la ciudad en un paraíso invernal.
+                              </li>
+                          </ul>
+                          
+                          Ushuaia, la ciudad más austral del mundo, es un destino donde podrás vivir una experiencia única que combina naturaleza, aventura y cultura en un solo lugar.
+                      </div>
+                      </div>
+                  </div>
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="faq2">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent2" aria-expanded="false" aria-controls="faqContent2">
+                              ¿Cómo llegar a Ushuaia?
+                          </button>
+                      </h2>
+                      <div id="faqContent2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                          Ushuaia está bien conectada por aire y mar, lo que facilita el acceso a este remoto destino.
+                          
+                          <ul>
+                              <li>✈️ <strong>En avión:</strong> El Aeropuerto Internacional Malvinas Argentinas (USH) recibe vuelos diarios desde Buenos Aires, con una duración aproximada de 3 horas. Las principales aerolíneas argentinas ofrecen vuelos directos a Ushuaia.</li>
+                              <li>🚢 <strong>En barco:</strong> Durante los meses de verano, varios cruceros turísticos realizan el recorrido hacia Ushuaia, llegando por el Canal Beagle. También se puede acceder en barco desde otras localidades cercanas de la Patagonia argentina.</li>
+                              <li>🚗 <strong>Por carretera:</strong> Ushuaia se encuentra a unas 12 horas en coche desde Río Gallegos (provincia de Santa Cruz), y la ruta nacional 3 conecta con la ciudad, aunque el trayecto puede ser desafiante debido a las condiciones climáticas y geográficas.</li>
+                          </ul>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="faq3">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent3" aria-expanded="false" aria-controls="faqContent3">
+                              ¿Cuál es la mejor época para visitar Ushuaia?
+                          </button>
+                      </h2>
+                      <div id="faqContent3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                          La mejor época para visitar Ushuaia depende de las actividades que deseas realizar.
+                          
+                          <ul>
+                              <li>🌞 <strong>Verano (diciembre a marzo):</strong>
+                                  Es la temporada más cálida, con temperaturas que varían entre los 10°C y 20°C. Durante estos meses, podrás disfrutar de actividades al aire libre como trekking, navegación por el Canal Beagle y explorar el Parque Nacional Tierra del Fuego.</li>
+                              
+                              <li>❄️ <strong>Invierno (junio a septiembre):</strong>
+                                  Si eres amante de los deportes de invierno, el invierno es la temporada ideal. Las temperaturas bajan a -5°C o menos y las actividades incluyen esquí, snowboard, y paseos en trineo. La nieve cubre la ciudad, creando un paisaje espectacular.</li>
+                              
+                              <li>🍂🌸 <strong>Otoño y primavera (abril y octubre-noviembre):</strong>  
+                                  Estos meses son perfectos para quienes buscan menos aglomeración de turistas. Las temperaturas son frías, pero agradables para caminatas, y podrás disfrutar de un paisaje único con las hojas de los árboles cambiando de color en otoño o la floración primaveral.</li>
+                          </ul>
+                      
+                          <p><strong>Consejo:</strong> Si buscas un ambiente más cálido y menos turístico, la primavera y el otoño son ideales, pero si lo tuyo son las actividades invernales, no dudes en visitar durante el invierno.</p>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq2">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent2" aria-expanded="false" aria-controls="faqContent2">
-                                ¿Cómo llegar a Ushuaia?
-                            </button>
-                        </h2>
-                        <div id="faqContent2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
-                                Puedes llegar a Ushuaia en avión desde Buenos Aires, o en barco a través del Canal Beagle.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq3">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent3" aria-expanded="false" aria-controls="faqContent3">
-                                ¿Cuál es la mejor época para visitar Ushuaia?
-                            </button>
-                        </h2>
-                        <div id="faqContent3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
-                                La mejor época para visitar Ushuaia es durante el verano (diciembre a marzo), cuando el clima es más cálido, pero también puedes disfrutar de la temporada de invierno (junio a septiembre) para actividades de nieve.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
         <div class="row">
             <div class="col-md-6">

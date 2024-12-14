@@ -374,6 +374,74 @@ footer .bi:hover {
 }
 
 
+/* Estilo para los títulos del acordeón */
+.accordion-header .accordion-button {
+    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
+    font-weight: 600; /* Negrita moderada */
+    font-size: 1.1rem; /* Tamaño de letra ligeramente más grande */
+    color: #ffffff; /* Texto blanco para mayor contraste */
+    background-color: #2b2e38; /* Color oscuro acorde al footer */
+    border: none; /* Elimina el borde */
+    transition: background-color 0.3s ease; /* Efecto suave al interactuar */
+}
+
+.accordion-header .accordion-button:hover {
+    background-color: #44485a; /* Color más claro al pasar el mouse */
+}
+
+/* Estilo general del acordeón */
+.accordion-item {
+    background-color: #2C2F3F; /* Fondo oscuro similar al footer */
+    border: 1px solid #3B4C5A; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    overflow: hidden; /* Evitar desbordes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Estilo del botón del acordeón */
+.accordion-button {
+    background-color: #2C2F3F; /* Fondo oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    border: none; /* Sin bordes adicionales */
+    font-weight: bold; /* Negrita */
+    padding: 15px; /* Espaciado interno */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+/* Hover en el botón */
+.accordion-button:hover {
+    background-color: #3B5A77; /* Azul vibrante al hacer hover */
+    color: #FFFFFF; /* Mantener texto blanco */
+}
+
+/* Botón activo (acordeón abierto) */
+.accordion-button:not(.collapsed) {
+    background-color: #3B5A77; /* Azul al expandir */
+    color: #FFFFFF; /* Texto blanco */
+    box-shadow: inset 0 -2px 0 #FFFFFF; /* Efecto línea interna */
+}
+
+/* Contenido del acordeón */
+.accordion-body {
+    background-color: #35394A; /* Fondo gris oscuro */
+    color: #E0E0E0; /* Texto gris claro */
+    padding: 15px; /* Espaciado interno */
+    font-size: 0.95rem; /* Tamaño de texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Personaliza la flecha del botón del acordeón */
+.accordion-button::after {
+    filter: brightness(0) invert(1); /* Convierte la flecha a blanco */
+}
+
+/* Opcional: cambia el color de la flecha también cuando está activa */
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1); /* Mantiene la flecha blanca cuando está expandida */
+}
+
+
 /* Galería de imágenes */
 
 /* Adaptable (Responsivo) */
