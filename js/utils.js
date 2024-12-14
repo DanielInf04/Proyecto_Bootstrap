@@ -1,5 +1,4 @@
 // Script para cerrar el acordeón al cambiar de página
-
 document.addEventListener('DOMContentLoaded', function () {
     // Cerrar todas las secciones del acordeón al cargar la página
     var myAccordion = document.getElementById('accordionFAQ');
