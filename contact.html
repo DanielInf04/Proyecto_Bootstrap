@@ -88,235 +88,299 @@
       <h2 class="text-center mb-4">Contáctanos</h2>
       <p class="text-center mb-4">Si tienes preguntas o necesitas más información, completa el siguiente formulario y te responderemos lo antes posible.</p>
   
-      <!-- Formulario de Contacto -->
-      <!-- Formulario de contacto con validación -->
-<form id="contact-form" class="needs-validation" novalidate action="submit_form.php" method="POST" onsubmit="return showToast()">
-    <div class="row">
-      <!-- Nombre Completo -->
-      <div class="col-md-6 mb-3">
-        <label for="nombre" class="form-label">Tu Nombre Completo</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo" value="Juan Pérez">
-        <div class="invalid-feedback">
-          <strong style="color: #d9534f;">Por favor, ingresa tu nombre completo.</strong>
-        </div>
-      </div>
+      <form id="contact-form" class="needs-validation" novalidate action="submit_form.php" method="POST" onsubmit="return showToast()">
+          <div class="row">
+            <!-- Nombre Completo -->
+            <div class="col-md-6 mb-3">
+              <label for="nombre" class="form-label">Tu Nombre Completo</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo" value="Juan Pérez">
+              <div class="invalid-feedback">
+                <strong style="color: #d9534f;">Por favor, ingresa tu nombre completo.</strong>
+              </div>
+            </div>
+        
+            <!-- Correo Electrónico -->
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Tu Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" required placeholder="Escribe tu correo electrónico" value="juanperez@mail.com">
+              <div class="invalid-feedback">
+                <strong style="color: #d9534f;">Por favor, ingresa un correo electrónico válido.</strong>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row">
+            <!-- Teléfono -->
+            <div class="col-md-6 mb-3">
+              <label for="telefono" class="form-label">Número de Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" name="telefono" required placeholder="Tu número de teléfono" value="+54 9 1122334455">
+              <div class="invalid-feedback">
+                <strong style="color: #d9534f;">Por favor, ingresa un número de teléfono válido.</strong>
+              </div>
+            </div>
+        
+            <!-- Destino -->
+            <div class="col-md-6 mb-3">
+              <label for="destino" class="form-label">¿A qué destino te gustaría viajar?</label>
+              <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino de tu preferencia" value="Ushuaia">
+              <div class="invalid-feedback">
+                <strong style="color: #d9534f;">Por favor, ingresa un destino de viaje.</strong>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row">
+            <!-- Fecha de Viaje -->
+            <div class="col-md-6 mb-3">
+              <label for="fecha" class="form-label">¿Cuándo te gustaría viajar?</label>
+              <input type="date" class="form-control" id="fecha" name="fecha" required value="2024-12-25">
+              <div class="invalid-feedback">
+                <strong style="color: #d9534f;">Por favor, selecciona una fecha de viaje.</strong>
+              </div>
+            </div>
+        
+            <!-- Tipo de Solicitud -->
+            <div class="col-md-6 mb-3">
+              <label for="tipo_solicitud" class="form-label">Tipo de Solicitud</label>
+              <select class="form-select" id="tipo_solicitud" name="tipo_solicitud" required>
+                <option value="consulta" selected>Consulta general</option>
+                <option value="reserva">Reserva de viaje</option>
+                <option value="cotizacion">Solicitar cotización</option>
+                <option value="otro">Otro</option>
+              </select>
+              <div class="invalid-feedback">
+                <strong style="color: #d9534f;">Por favor, selecciona un tipo de solicitud.</strong>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Mensaje -->
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Tu Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required placeholder="Escribe tu mensaje">Quiero saber más sobre los destinos turísticos en Ushuaia.</textarea>
+            <div class="invalid-feedback">
+              <strong style="color: #d9534f;">Por favor, ingresa tu mensaje.</strong>
+            </div>
+          </div>
   
-      <!-- Correo Electrónico -->
-      <div class="col-md-6 mb-3">
-        <label for="email" class="form-label">Tu Correo Electrónico</label>
-        <input type="email" class="form-control" id="email" name="email" required placeholder="Escribe tu correo electrónico" value="juanperez@mail.com">
-        <div class="invalid-feedback">
-          <strong style="color: #d9534f;">Por favor, ingresa un correo electrónico válido.</strong>
-        </div>
-      </div>
-    </div>
-  
-    <div class="row">
-      <!-- Teléfono -->
-      <div class="col-md-6 mb-3">
-        <label for="telefono" class="form-label">Número de Teléfono</label>
-        <input type="tel" class="form-control" id="telefono" name="telefono" required placeholder="Tu número de teléfono" value="+54 9 1122334455">
-        <div class="invalid-feedback">
-          <strong style="color: #d9534f;">Por favor, ingresa un número de teléfono válido.</strong>
-        </div>
-      </div>
-  
-      <!-- Destino -->
-      <div class="col-md-6 mb-3">
-        <label for="destino" class="form-label">¿A qué destino te gustaría viajar?</label>
-        <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino de tu preferencia" value="Ushuaia">
-        <div class="invalid-feedback">
-          <strong style="color: #d9534f;">Por favor, ingresa un destino de viaje.</strong>
-        </div>
-      </div>
-    </div>
-  
-    <div class="row">
-      <!-- Fecha de Viaje -->
-      <div class="col-md-6 mb-3">
-        <label for="fecha" class="form-label">¿Cuándo te gustaría viajar?</label>
-        <input type="date" class="form-control" id="fecha" name="fecha" required value="2024-12-25">
-        <div class="invalid-feedback">
-          <strong style="color: #d9534f;">Por favor, selecciona una fecha de viaje.</strong>
-        </div>
-      </div>
-  
-      <!-- Tipo de Solicitud -->
-      <div class="col-md-6 mb-3">
-        <label for="tipo_solicitud" class="form-label">Tipo de Solicitud</label>
-        <select class="form-select" id="tipo_solicitud" name="tipo_solicitud" required>
-          <option value="consulta" selected>Consulta general</option>
-          <option value="reserva">Reserva de viaje</option>
-          <option value="cotizacion">Solicitar cotización</option>
-          <option value="otro">Otro</option>
-        </select>
-        <div class="invalid-feedback">
-          <strong style="color: #d9534f;">Por favor, selecciona un tipo de solicitud.</strong>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Mensaje -->
-    <div class="mb-3">
-      <label for="mensaje" class="form-label">Tu Mensaje</label>
-      <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required placeholder="Escribe tu mensaje">Quiero saber más sobre los destinos turísticos en Ushuaia.</textarea>
-      <div class="invalid-feedback">
-        <strong style="color: #d9534f;">Por favor, ingresa tu mensaje.</strong>
-      </div>
-    </div>
-  
-    <!-- Botón de Enviar -->
-    <button type="submit" class="btn btn-light w-100">Enviar</button>
-  </form>
+          <button type="submit" class="btn-custom-form">
+            <i class="bi bi-send"></i> Enviar
+          </button>
+        </form>
     </section>
   </div>
 
-  <!-- Sección Contacto -->
-<!-- Sección Contacto -->
-<!-- <section id="contacto" class="py-5" style="background-color: #f0f8ff;">
-    <div class="container">
-      <div class="row justify-content-center">
-         Card de Contacto con estilo inspirado en Ushuaia 
-        <div class="col-lg-8 col-md-10">
-          <div class="card shadow-lg border-0" style="background: linear-gradient(to right, #003366, #00bfff); color: white;">
-            <div class="card-body">
-              <h3 class="card-title text-center mb-4" style="color: #ffffff;">Formulario de Contacto</h3>
-  
-               Formulario de contacto con validación
-              <form id="contact-form" class="needs-validation" novalidate action="submit_form.php" method="POST" onsubmit="return showToast()">
-                <div class="row">
-                   Nombre Completo
-                  <div class="col-md-6 mb-3">
-                    <label for="nombre" class="form-label">Tu Nombre Completo</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo" value="Juan Pérez">
-                    <div class="invalid-feedback">
-                      <strong style="color: #d9534f;">Por favor, ingresa tu nombre completo.</strong>
-                    </div>
-                  </div>
-  
-                   Correo Electrónico 
-                  <div class="col-md-6 mb-3">
-                    <label for="email" class="form-label">Tu Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" required placeholder="Escribe tu correo electrónico" value="juanperez@mail.com">
-                    <div class="invalid-feedback">
-                      <strong style="color: #d9534f;">Por favor, ingresa un correo electrónico válido.</strong>
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="row">
-                   Teléfono 
-                  <div class="col-md-6 mb-3">
-                    <label for="telefono" class="form-label">Número de Teléfono</label>
-                    <input type="tel" class="form-control" id="telefono" name="telefono" required placeholder="Tu número de teléfono" value="+54 9 1122334455">
-                    <div class="invalid-feedback">
-                      <strong style="color: #d9534f;">Por favor, ingresa un número de teléfono válido.</strong>
-                    </div>
-                  </div>
-  
-                   Destino 
-                  <div class="col-md-6 mb-3">
-                    <label for="destino" class="form-label">¿A qué destino te gustaría viajar?</label>
-                    <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino de tu preferencia" value="Ushuaia">
-                    <div class="invalid-feedback">
-                      <strong style="color: #d9534f;">Por favor, ingresa un destino de viaje.</strong>
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="row">
-                  Fecha de Viaje
-                  <div class="col-md-6 mb-3">
-                    <label for="fecha" class="form-label">¿Cuándo te gustaría viajar?</label>
-                    <input type="date" class="form-control" id="fecha" name="fecha" required value="2024-12-25">
-                    <div class="invalid-feedback">
-                      <strong style="color: #d9534f;">Por favor, selecciona una fecha de viaje.</strong>
-                    </div>
-                  </div>
-  
-                   Tipo de Solicitud
-                  <div class="col-md-6 mb-3">
-                    <label for="tipo_solicitud" class="form-label">Tipo de Solicitud</label>
-                    <select class="form-select" id="tipo_solicitud" name="tipo_solicitud" required>
-                      <option value="consulta" selected>Consulta general</option>
-                      <option value="reserva">Reserva de viaje</option>
-                      <option value="cotizacion">Solicitar cotización</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      <strong style="color: #d9534f;">Por favor, selecciona un tipo de solicitud.</strong>
-                    </div>
-                  </div>
-                </div>
-  
-                 Mensaje 
-                <div class="mb-3">
-                  <label for="mensaje" class="form-label">Tu Mensaje</label>
-                  <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required placeholder="Escribe tu mensaje">Quiero saber más sobre los destinos turísticos en Ushuaia.</textarea>
-                  <div class="invalid-feedback">
-                    <strong style="color: #d9534f;">Por favor, ingresa tu mensaje.</strong>
-                  </div>
-                </div>
-  
-                 Botón de Enviar 
-                <button type="submit" class="btn btn-light w-100">Enviar</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <footer class="bg-dark text-white py-5 d-flex justify-content-center align-items-center">
     <div class="container">
-      <div class="row">
-        <!-- Logo y descripción -->
-        <div class="col-md-4 mb-4">
-          <a href="#inicio" class="logo_footer text-white text-decoration-none">
-            <img src="img/logo_sinfondo.png" alt="Logo Ushuaia" width="100" class="mb-3">
-          </a>
-          <p>Descubre la magia de Ushuaia, el fin del mundo, donde la aventura y la naturaleza se encuentran. Te esperamos para una experiencia inolvidable.</p>
+        <div class="row">
+            <!-- Logo y descripción -->
+            <div class="col-md-4 mb-4">
+                <a href="#inicio" class="logo_footer text-white text-decoration-none">
+                    <img src="img/logo_sinfondo.png" alt="Logo Ushuaia" width="100" class="mb-3">
+                </a>
+                <p>Descubre la magia de Ushuaia, el fin del mundo, donde la aventura y la naturaleza se encuentran. Te esperamos para una experiencia inolvidable.</p>
+            </div>
+
+            <!-- Enlaces rápidos -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase">Enlaces útiles</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html#historia" class="text-white text-decoration-none">Historia</a></li>
+                    <li><a href="index.html#turismo" class="text-white text-decoration-none">Atractivos Turísticos</a></li>
+                    <li><a href="galery.html#galeria" class="text-white text-decoration-none">Galería</a></li>
+                    <li><a href="#contacto" class="text-white text-decoration-none">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase">Síguenos</h5>
+                <p>Conecta con nosotros en nuestras redes sociales:</p>
+                <div class="d-flex gap-3">
+                    <a href="https://www.facebook.com/Ushuaialovers/?locale=es_LA" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/turismoushuaia/?hl=es" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                    <a href="https://x.com/ushuaia_turismo" class="text-white fs-4"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.youtube.com/channel/UCt9y2PgwRY4ELdbu5QMi7hQ" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
         </div>
-  
-        <!-- Enlaces rápidos -->
-        <div class="col-md-4 mb-4">
-          <h5 class="text-uppercase">Enlaces útiles</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html#historia" class="text-white text-decoration-none">Historia</a></li>
-            <li><a href="index.html#turismo" class="text-white text-decoration-none">Atractivos Turísticos</a></li>
-            <li><a href="#galeria" class="text-white text-decoration-none">Galería</a></li>
-            <li><a href="#contacto" class="text-white text-decoration-none">Contacto</a></li>
-          </ul>
-        </div>
-  
-        <!-- Redes sociales -->
-        <div class="col-md-4 mb-4">
-          <h5 class="text-uppercase">Síguenos</h5>
-          <p>Conecta con nosotros en nuestras redes sociales:</p>
-          <div class="d-flex gap-3">
-            <a href="https://www.facebook.com/Ushuaialovers/?locale=es_LA" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/turismoushuaia/?hl=es" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/ushuaia_turismo" class="text-white fs-4"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.youtube.com/channel/UCt9y2PgwRY4ELdbu5QMi7hQ" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+
+        <hr class="bg-white my-4">
+
+        <!-- Sección Preguntas Frecuentes (FAQ) -->
+        <div class="row mb-4">
+          <div class="col-12">
+              <h5 class="text-uppercase">Preguntas Frecuentes</h5>
+              <div class="accordion" id="accordionFAQ">
+                <!-- Pregunta 1 -->
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="faq1">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent1" aria-expanded="true" aria-controls="faqContent1">
+                              ¿Qué hacer en Ushuaia?
+                          </button>
+                      </h2>
+                      <div id="faqContent1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                          Ushuaia ofrece una vasta cantidad de actividades para todos los gustos, tanto para los amantes de la naturaleza como para los que buscan aventura y cultura. Aquí tienes algunas de las actividades más destacadas:
+                          
+                          <ul style="list-style: none; padding: 0; margin: 0;">
+                              <li style="margin-bottom: 10px;">
+                                  <strong>🚢 Navegación por el Canal Beagle:</strong>  
+                                  Un paseo en barco donde podrás disfrutar de la belleza del paisaje, avistar fauna marina como lobos marinos y pingüinos, y admirar el famoso faro Les Éclaireurs.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>🌳 Parque Nacional Tierra del Fuego:</strong>  
+                                  Explora sus increíbles senderos rodeados de bosques, montañas y lagos. Este parque es ideal para los amantes del trekking, donde podrás disfrutar de paisajes que parecen sacados de otro mundo.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>⛰️ Trekking al Glaciar Martial:</strong>  
+                                  Una caminata que te llevará a lo alto de la montaña para ofrecerte vistas impresionantes de la ciudad de Ushuaia, el Canal Beagle y la cordillera de los Andes.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>🚂 Tren del Fin del Mundo:</strong>  
+                                  Recorre la histórica ruta que utilizaban los presos de la antigua prisión de Ushuaia. Disfruta del paisaje patagónico y aprende sobre la historia de este importante ferrocarril.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>🏛️ Museo Marítimo y del Presidio:</strong>  
+                                  Un lugar clave para conocer la historia de Ushuaia, desde la época de los pueblos originarios hasta el uso del presidio como centro de detención. Es una parada obligatoria para los amantes de la historia.
+                              </li>
+                              <li style="margin-bottom: 10px;">
+                                  <strong>❄️ Actividades invernales:</strong>  
+                                  Si visitas Ushuaia en invierno, tendrás la oportunidad de disfrutar de actividades como esquí, snowboard, caminatas con raquetas y paseos en trineo tirado por perros huskies. La nieve transforma la ciudad en un paraíso invernal.
+                              </li>
+                          </ul>
+                          
+                          Ushuaia, la ciudad más austral del mundo, es un destino donde podrás vivir una experiencia única que combina naturaleza, aventura y cultura en un solo lugar.
+                      </div>
+                      </div>
+                  </div>
+                  <!-- Pregunta 2 -->
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="faq2">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent2" aria-expanded="false" aria-controls="faqContent2">
+                              ¿Cómo llegar a Ushuaia?
+                          </button>
+                      </h2>
+                      <div id="faqContent2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                          Ushuaia está bien conectada por aire y mar, lo que facilita el acceso a este remoto destino.
+                          
+                          <ul>
+                              <li>✈️ <strong>En avión:</strong> El Aeropuerto Internacional Malvinas Argentinas (USH) recibe vuelos diarios desde Buenos Aires, con una duración aproximada de 3 horas. Las principales aerolíneas argentinas ofrecen vuelos directos a Ushuaia.</li>
+                              <li>🚢 <strong>En barco:</strong> Durante los meses de verano, varios cruceros turísticos realizan el recorrido hacia Ushuaia, llegando por el Canal Beagle. También se puede acceder en barco desde otras localidades cercanas de la Patagonia argentina.</li>
+                              <li>🚗 <strong>Por carretera:</strong> Ushuaia se encuentra a unas 12 horas en coche desde Río Gallegos (provincia de Santa Cruz), y la ruta nacional 3 conecta con la ciudad, aunque el trayecto puede ser desafiante debido a las condiciones climáticas y geográficas.</li>
+                          </ul>
+                      </div>
+                      </div>
+                  </div>
+                  <!-- Pregunta 3 -->
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="faq3">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent3" aria-expanded="false" aria-controls="faqContent3">
+                              ¿Cuál es la mejor época para visitar Ushuaia?
+                          </button>
+                      </h2>
+                      <div id="faqContent3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                          La mejor época para visitar Ushuaia depende de las actividades que deseas realizar.
+                          
+                          <ul>
+                              <li>🌞 <strong>Verano (diciembre a marzo):</strong>
+                                  Es la temporada más cálida, con temperaturas que varían entre los 10°C y 20°C. Durante estos meses, podrás disfrutar de actividades al aire libre como trekking, navegación por el Canal Beagle y explorar el Parque Nacional Tierra del Fuego.</li>
+                              
+                              <li>❄️ <strong>Invierno (junio a septiembre):</strong>
+                                  Si eres amante de los deportes de invierno, el invierno es la temporada ideal. Las temperaturas bajan a -5°C o menos y las actividades incluyen esquí, snowboard, y paseos en trineo. La nieve cubre la ciudad, creando un paisaje espectacular.</li>
+                              
+                              <li>🍂🌸 <strong>Otoño y primavera (abril y octubre-noviembre):</strong>  
+                                  Estos meses son perfectos para quienes buscan menos aglomeración de turistas. Las temperaturas son frías, pero agradables para caminatas, y podrás disfrutar de un paisaje único con las hojas de los árboles cambiando de color en otoño o la floración primaveral.</li>
+                          </ul>
+                      
+                          <p><strong>Consejo:</strong> Si buscas un ambiente más cálido y menos turístico, la primavera y el otoño son ideales, pero si lo tuyo son las actividades invernales, no dudes en visitar durante el invierno.</p>
+                        </div>
+                      </div>
+                  </div>
+                  <!-- Pregunta 4 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent4" aria-expanded="false" aria-controls="faqContent4">
+                            ¿Es seguro visitar Ushuaia?
+                        </button>
+                    </h2>
+                    <div id="faqContent4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Ushuaia es una ciudad bastante segura para los turistas. Como en cualquier destino turístico, se recomienda tener precaución en áreas poco transitadas, especialmente de noche, pero en general, es un lugar tranquilo y hospitalario.
+                        </div>
+                    </div>
+                </div>
+                <!-- Pregunta 5 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq5">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent5" aria-expanded="false" aria-controls="faqContent5">
+                          ¿Cuál es la moneda utilizada en Ushuaia?
+                      </button>
+                  </h2>
+                  <div id="faqContent5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#accordionFAQ">
+                      <div class="accordion-body">
+                          La moneda oficial en Ushuaia es el peso argentino (ARS). Sin embargo, en lugares turísticos también es posible pagar con dólares estadounidenses, aunque es recomendable llevar pesos argentinos para evitar posibles tipos de cambio desfavorables.
+                      </div>
+                  </div>
+                </div>
+                <!-- Pregunta 6 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq6">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent6" aria-expanded="false" aria-controls="faqContent6">
+                          ¿Se necesita visa para viajar a Ushuaia?
+                      </button>
+                  </h2>
+                  <div id="faqContent6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#accordionFAQ">
+                      <div class="accordion-body">
+                          Los turistas de muchos países no necesitan visa para ingresar a Argentina, y por lo tanto, pueden visitar Ushuaia sin una visa especial. Sin embargo, se recomienda verificar los requisitos de entrada específicos para tu país antes de viajar.
+                      </div>
+                  </div>
+                </div>
+                <!-- Pregunta 7 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq7">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent7" aria-expanded="false" aria-controls="faqContent7">
+                          ¿Existen opciones de transporte público en Ushuaia?
+                      </button>
+                  </h2>
+                  <div id="faqContent7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#accordionFAQ">
+                      <div class="accordion-body">
+                          Sí, Ushuaia tiene un sistema de autobuses urbanos que conecta varias partes de la ciudad. También existen taxis y vehículos privados para alquilar. Si planeas explorar más allá de la ciudad, puedes contratar excursiones o alquilar un coche.
+                      </div>
+                  </div>
+                </div>
+                <!-- Pregunta 8 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faq8">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqContent8" aria-expanded="false" aria-controls="faqContent8">
+                          ¿Hay actividades para hacer con niños en Ushuaia?
+                      </button>
+                  </h2>
+                  <div id="faqContent8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#accordionFAQ">
+                      <div class="accordion-body">
+                          Sí, Ushuaia ofrece varias actividades aptas para niños, como visitas al Parque Nacional Tierra del Fuego, paseos en el Tren del Fin del Mundo, y actividades de invierno como trineo y paseos en perros huskies. Además, hay museos como el Museo Marítimo y el Museo del Presidio que ofrecen una experiencia educativa para toda la familia.
+                      </div>
+                  </div>
+                </div>
+              </div>
           </div>
-        </div>
       </div>
-  
-      <hr class="bg-white my-4">
-  
-      <div class="row">
-        <div class="col-md-6">
-          <p class="mb-0">&copy; 2024 Descubre Ushuaia. Todos los derechos reservados.</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2024 Descubre Ushuaia. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#privacidad" class="text-white text-decoration-none">Política de Privacidad</a> |
+                <a href="#terminos" class="text-white text-decoration-none">Términos y Condiciones</a>
+            </div>
         </div>
-        <div class="col-md-6 text-md-end">
-          <a href="#privacidad" class="text-white text-decoration-none">Política de Privacidad</a> | 
-          <a href="#terminos" class="text-white text-decoration-none">Términos y Condiciones</a>
-        </div>
-      </div>
     </div>
   </footer>
 
+  <script src="./js/utils.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
