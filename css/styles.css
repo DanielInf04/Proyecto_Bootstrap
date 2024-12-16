@@ -525,14 +525,49 @@ textarea.form-control {
 /* Galeria de imagenes */
 
 /* Galería CSS */
+
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "area1 area2 area3"
+      "area4 area5 area3"
+      "area4 area6 area7"
+      "area8 area8 area9"
+      "area10 area11 area9"
+      "area10 area12 area13";
     gap: 15px; /* Espacio entre imágenes */
     justify-content: center;
   }
-  
+
   .galeria-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .galeria-grid .area1 { grid-area: area1; }
+  .galeria-grid .area2 { grid-area: area2; }
+  .galeria-grid .area3 { grid-area: area3; }
+  .galeria-grid .area4 { grid-area: area4; }
+  .galeria-grid .area5 { grid-area: area5; }
+  .galeria-grid .area6 { grid-area: area6; }
+  .galeria-grid .area7 { grid-area: area7; }
+  .galeria-grid .area8 { grid-area: area8; }
+  .galeria-grid .area9 { grid-area: area9; }
+  .galeria-grid .area10 { grid-area: area10; }
+  .galeria-grid .area11 { grid-area: area11; }
+  .galeria-grid .area12 { grid-area: area12; }
+  .galeria-grid .area13 { grid-area: area13; }
+
+/*.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;  Espacio entre imágenes 
+    justify-content: center;
+  }*/
+  
+  /*.galeria-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -545,7 +580,7 @@ textarea.form-control {
 
   .galeria-grid img.col-span-2 {
     grid-column: span 2;
-  }
+  }*/
 
 
 /* Adaptable (Responsivo) */
@@ -563,6 +598,18 @@ textarea.form-control {
     .columna img {
         width: 400px;
     }
+    .galeria-grid {
+        grid-template-areas:
+          "area1 area3"
+          "area2 area3"
+          "area4 area5"
+          "area4 area6"
+          "area7 area11"
+          "area8 area8"
+          "area9 area10"
+          "area9 area10"
+          "area12 area13";
+      }
 
 }
 @media screen and (max-width: 767px) {
@@ -580,7 +627,30 @@ textarea.form-control {
         justify-content: center;
         align-items: center;
     }
-
+    .container {
+        width: 100%;
+        margin: 0 15px;
+    }
+    .galeria-grid {
+        grid-template-areas:
+          "area1"
+          "area2"
+          "area3"
+          "area3"
+          "area5"
+          "area6"
+          "area4"
+          "area4"
+          "area7"
+          "area8"
+          "area9"
+          "area9"
+          "area10"
+          "area10"
+          "area11"
+          "area12"
+          "area13";
+      }
 }
 
 @media screen and (max-width: 576px) {
