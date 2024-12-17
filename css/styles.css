@@ -57,7 +57,7 @@ html {
 }
 
 /* Efecto de desenfoque (blur) en el fondo */
-.hero::before, .hero_galery::before, .hero_contact::before {
+.hero::before, .hero_galery::before, .hero_contact::before, .hero_food::before {
     content: "";
     position: absolute;
     top: 0;
@@ -97,6 +97,20 @@ html {
     position: relative;
     padding-top: 70px;
 }
+.hero_food {
+    background-image: url('../img/Comida/background.jpg'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding-top: 70px;
+}
 
 .hero-principal {
     z-index: 1; /* Hace que el contenido esté por encima del fondo desenfocado */
@@ -105,7 +119,7 @@ html {
 }
 
 /* Estilo del título (h1) */
-.hero h1, .hero_galery h1 {
+.hero h1, .hero_galery h1, .hero_food h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -119,7 +133,7 @@ html {
     z-index: 1; /* Asegura que el texto esté por encima del fondo 
 }*/
 
-.hero h2, .hero_galery h2 {
+.hero h2, .hero_galery h2, .hero_food h2 {
     font-size: 1.5rem;
     font-weight: lighter;
     color: #fff;
@@ -161,6 +175,8 @@ html {
     transform: translateY(1px); /* Desplazamiento hacia abajo */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra más suave */
 }
+
+/* Hasta aqui nada */
 
 /* Historia */
 
@@ -610,6 +626,10 @@ textarea.form-control {
           "area9 area10"
           "area12 area13";
       }
+      /*.custom-grid .col-md-6 {
+        width: 100%;   Esto es opcional, ya lo hace Bootstrap 
+        gap: 10px;
+      }*/
 
 }
 @media screen and (max-width: 767px) {
@@ -627,10 +647,10 @@ textarea.form-control {
         justify-content: center;
         align-items: center;
     }
-    .container {
+    /*.container {
         width: 100%;
         margin: 0 15px;
-    }
+    }*/
     .galeria-grid {
         grid-template-areas:
           "area1"
