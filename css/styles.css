@@ -22,6 +22,16 @@
     color: #0056b3;
 }
 
+/*.logo {
+    display: block;
+    width: 90px; 
+    height: 90px; 
+    background-image: url('../img/logo_sinfondo.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+}*/
+
 /* Para corregir la visualizacion del contenido al presionar un enlace */
 html {
     scroll-padding-top: 114px;
@@ -576,6 +586,7 @@ textarea.form-control {
   .galeria-grid .area12 { grid-area: area12; }
   .galeria-grid .area13 { grid-area: area13; }
 
+
 /*.galeria-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -626,6 +637,8 @@ textarea.form-control {
           "area9 area10"
           "area12 area13";
       }
+
+      
       /*.custom-grid .col-md-6 {
         width: 100%;   Esto es opcional, ya lo hace Bootstrap 
         gap: 10px;

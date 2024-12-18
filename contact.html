@@ -80,62 +80,62 @@
   </header>
 
   <!-- Sección Contacto -->
-<div class="container my-5">
+  <div class="container my-5">
     <section id="contacto">
       <h2 class="text-center mb-4">Contáctanos</h2>
       <p class="text-center mb-4">Si tienes preguntas o necesitas más información, completa el siguiente formulario y te responderemos lo antes posible.</p>
   
-      <form id="contact-form" class="needs-validation" novalidate action="submit_form.php" method="POST" onsubmit="return showToast()">
+      <form id="contact-form" class="needs-validation" novalidate action="submit_form.php" method="POST" onsubmit="return showModal(event)">
           <div class="row">
             <!-- Nombre Completo -->
             <div class="col-md-6 mb-3">
               <label for="nombre" class="form-label">Tu Nombre Completo</label>
-              <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo" value="Juan Pérez">
+              <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo">
               <div class="invalid-feedback">
                 <strong style="color: #d9534f;">Por favor, ingresa tu nombre completo.</strong>
               </div>
             </div>
-        
+  
             <!-- Correo Electrónico -->
             <div class="col-md-6 mb-3">
               <label for="email" class="form-label">Tu Correo Electrónico</label>
-              <input type="email" class="form-control" id="email" name="email" required placeholder="Escribe tu correo electrónico" value="juanperez@mail.com">
+              <input type="email" class="form-control" id="email" name="email" required placeholder="Escribe tu correo electrónico">
               <div class="invalid-feedback">
                 <strong style="color: #d9534f;">Por favor, ingresa un correo electrónico válido.</strong>
               </div>
             </div>
           </div>
-        
+      
           <div class="row">
             <!-- Teléfono -->
             <div class="col-md-6 mb-3">
               <label for="telefono" class="form-label">Número de Teléfono</label>
-              <input type="tel" class="form-control" id="telefono" name="telefono" required placeholder="Tu número de teléfono" value="+54 9 1122334455">
+              <input type="tel" class="form-control" id="telefono" name="telefono" required placeholder="Tu número de teléfono">
               <div class="invalid-feedback">
                 <strong style="color: #d9534f;">Por favor, ingresa un número de teléfono válido.</strong>
               </div>
             </div>
-        
+      
             <!-- Destino -->
             <div class="col-md-6 mb-3">
               <label for="destino" class="form-label">¿A qué destino te gustaría viajar?</label>
-              <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino de tu preferencia" value="Ushuaia">
+              <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino de tu preferencia">
               <div class="invalid-feedback">
                 <strong style="color: #d9534f;">Por favor, ingresa un destino de viaje.</strong>
               </div>
             </div>
           </div>
-        
+      
           <div class="row">
             <!-- Fecha de Viaje -->
             <div class="col-md-6 mb-3">
               <label for="fecha" class="form-label">¿Cuándo te gustaría viajar?</label>
-              <input type="date" class="form-control" id="fecha" name="fecha" required value="2024-12-25">
+              <input type="date" class="form-control" id="fecha" name="fecha" required>
               <div class="invalid-feedback">
                 <strong style="color: #d9534f;">Por favor, selecciona una fecha de viaje.</strong>
               </div>
             </div>
-        
+      
             <!-- Tipo de Solicitud -->
             <div class="col-md-6 mb-3">
               <label for="tipo_solicitud" class="form-label">Tipo de Solicitud</label>
@@ -150,7 +150,7 @@
               </div>
             </div>
           </div>
-        
+      
           <!-- Mensaje -->
           <div class="mb-3">
             <label for="mensaje" class="form-label">Tu Mensaje</label>
@@ -160,11 +160,42 @@
             </div>
           </div>
   
-          <button type="submit" class="btn-custom-form">
-            <i class="bi bi-send"></i> Enviar
-          </button>
-        </form>
+          <!-- Botones -->
+          <div class="btn-group d-flex justify-content-center" role="group" aria-label="Formulario acciones">
+            <button type="button" class="btn btn-secondary" style="flex: 0 0 100px;" onclick="document.getElementById('contact-form').reset();">
+              Limpiar
+            </button>
+            <button type="submit" class="btn btn-primary" style="flex: 0 0 100px;">
+              <i class="bi bi-send"></i> Enviar
+            </button>
+          </div>
+      </form>
     </section>
+  </div>
+
+  <!-- Modal para mostrar al enviar el formulario -->
+  <div class="modal fade" id="modalSuccess" tabindex="-1" aria-labelledby="modalSuccessLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Encabezado del Modal -->
+        <div class="modal-header" style="background-color: #28a745; color: white;">
+          <h5 class="modal-title" id="modalSuccessLabel"><i class="bi bi-check-circle"></i> ¡Formulario Enviado!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <!-- Cuerpo del Modal -->
+        <div class="modal-body">
+          <p style="font-size: 1.2rem;">Tu mensaje ha sido enviado con éxito. Te responderemos lo antes posible. <br>Gracias por tu interés.</p>
+        </div>
+  
+        <!-- Pie del Modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle"></i> Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer class="bg-dark text-white py-5 d-flex justify-content-center align-items-center">

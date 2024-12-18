@@ -1,28 +1,22 @@
-// Obtén el formulario y el botón
-const form = document.getElementById('contact-form');
-const submitBtn = document.getElementById('submitBtn');
-
-// Añadir un evento para capturar el envío del formulario
-form.addEventListener('submit', function(event) {
-  // Prevenir el envío del formulario
-  event.preventDefault();
-
-  // Validación manual (si quieres hacerla antes de mostrar el mensaje)
-  if (form.checkValidity() === false) {
-    // Si no es válido, puedes agregar feedback aquí
-    form.classList.add('was-validated');
+function showModal(event) {
+  event.preventDefault(); // Evita el envío del formulario
+  
+  // Validar el formulario
+  var form = document.getElementById('contact-form');
+  
+  // Si el formulario es válido, mostramos el modal
+  if (form.checkValidity()) {
+    var myModal = new bootstrap.Modal(document.getElementById('modalSuccess'), {
+      keyboard: false
+    });
+    myModal.show();
+    
+    // Limpiamos el formulario después de un breve retraso
+    setTimeout(function() {
+      form.reset(); // Limpiar el formulario después de mostrar el modal
+    }, 1000); // Retraso de 1 segundo para no limpiar antes de que el modal se muestre
   } else {
-    // Si es válido, mostrar el mensaje de éxito o realizar alguna acción
-    showSuccessMessage();
+    // Si el formulario no es válido, mostramos la validación visual
+    form.classList.add('was-validated');
   }
-});
-
-// Función para mostrar un mensaje de éxito o realizar alguna otra acción
-function showSuccessMessage() {
-  alert("Formulario enviado correctamente (simulación, no se envió).");
-
-  // Aquí puedes colocar una lógica para mostrar un toast, modal o cualquier otro mensaje
-  // Por ejemplo, un toast:
-  var toast = new bootstrap.Toast(document.getElementById('liveToast'));
-  toast.show();
 }
