@@ -13,7 +13,7 @@ function displayFood(data) {
           foodCard.innerHTML = `
             <div class="card">
               <img src="${item.image}" class="card-img-top" alt="Imagen de comida">
-              <div class="card-body">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
                 <h5 class="card-title">${item.name}</h5>
                 <p class="card-text">${item.description}</p>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 

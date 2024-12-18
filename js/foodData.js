@@ -8,7 +8,7 @@ const foodData = [
     },
     { 
         name: "Trucha del Canal Beagle", 
-        description: "Pescado fresco de las aguas cristalinas de la región, con un sabor delicado y auténtico.", 
+        description: "Pescado fresco de las aguas cristalinas, con sabor delicado y auténtico.", 
         image: "img/Comida/trucha.jpg",
         details: "La <b><i>Trucha del Canal Beagle</i></b> es un tesoro gastronómico de la Patagonia. Este pescado es capturado en las aguas frías y cristalinas del sur, lo que garantiza su frescura y calidad. Suele prepararse a la parrilla o al horno, acompañado de <b>hierbas autóctonas</b> y guarniciones que realzan su sabor natural."
     },
