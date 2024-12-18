@@ -1,4 +1,4 @@
-/* Nuevos cambios */
+/* Nuevos cambios 2 */
 const foodData = [
     {
         name: "Choripán Fueguino",
