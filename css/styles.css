@@ -98,7 +98,7 @@ html {
     padding-top: 70px;
 }
 .hero_food {
-    background-image: url('../img/Comida/background.jpg'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-image: url('../img/food/background.jpg'); /* Asegúrate de que la ruta de la imagen sea correcta */
     background-size: cover;
     background-position: center;
     width: 100%;
