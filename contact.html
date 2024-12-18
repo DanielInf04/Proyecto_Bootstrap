@@ -119,9 +119,18 @@
             <!-- Destino -->
             <div class="col-md-6 mb-3">
               <label for="destino" class="form-label">¿A qué destino te gustaría viajar?</label>
-              <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino de tu preferencia">
+              <select class="form-select" id="destino" name="destino" required>
+                <option value="" disabled selected>Selecciona un destino</option>
+                <option value="ushuaia">Ushuaia</option>
+                <option value="tierra_del_fuego">Tierra del Fuego</option>
+                <option value="parque_nacional_ushuaia">Parque Nacional Ushuaia</option>
+                <option value="glaciar_les_eclaireurs">Glaciar Les Eclaireurs</option>
+                <option value="canal_beagle">Canal Beagle</option>
+                <option value="marcha_blanca">Marcha Blanca</option>
+                <option value="laguna_esmeralda">Laguna Esmeralda</option>
+              </select>
               <div class="invalid-feedback">
-                <strong style="color: #d9534f;">Por favor, ingresa un destino de viaje.</strong>
+                <strong style="color: #d9534f;">Por favor, selecciona un destino de viaje.</strong>
               </div>
             </div>
           </div>

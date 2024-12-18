@@ -32,6 +32,10 @@
     background-position: center; 
 }*/
 
+body, html {
+    overflow-x: hidden;
+}
+
 /* Para corregir la visualizacion del contenido al presionar un enlace */
 html {
     scroll-padding-top: 114px;
