@@ -68,7 +68,7 @@ const foodData = [
     { 
         name: "Tamal de cerdo", 
         description: "Tamal relleno de cerdo, una combinación deliciosa de sabores.", 
-        image: "img/Comida/tamal.jpg" 
+        image: "img/Comida/sopa_camarones.jpg" 
     },
     { 
         name: "Galletas de avena y miel", 
