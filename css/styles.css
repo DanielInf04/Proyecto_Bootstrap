@@ -1,9 +1,8 @@
 /* Barra de navegación */
 .navbar {
-    /*background-color: transparent;*/ /* Fondo blanco semitransparente */
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
-    backdrop-filter: blur(5px);  /* Fondo difuso cuando se hace scroll */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .navbar-nav {
@@ -22,27 +21,16 @@
     color: #0056b3;
 }
 
-/*.logo {
-    display: block;
-    width: 90px; 
-    height: 90px; 
-    background-image: url('../img/logo_sinfondo.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; 
-}*/
-
 body, html {
     overflow-x: hidden;
 }
 
-/* Para corregir la visualizacion del contenido al presionar un enlace */
+/* Corrección visual del contenido al presionar un enlace */
 html {
     scroll-padding-top: 114px;
 }
 
 /* Estilos generales */
-
 .seccion-clara {
     color: black;
     background-color: white;
@@ -53,10 +41,8 @@ html {
     background-color: #1b1b32;
 }
 
-/* Seccion Hero */
-
-.hero {
-    background-image: url('../img/fondo_ushuaia.jpg'); /* Asegúrate de que la ruta de la imagen sea correcta */
+/* Estilos comunes para las secciones Hero */
+.hero, .hero_galery, .hero_contact, .hero_food {
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -70,7 +56,7 @@ html {
     padding-top: 70px;
 }
 
-/* Efecto de desenfoque (blur) en el fondo */
+/* Efecto de desenfoque (blur) en el fondo para todas las secciones Hero */
 .hero::before, .hero_galery::before, .hero_contact::before, .hero_food::before {
     content: "";
     position: absolute;
@@ -78,56 +64,30 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(4px); /* Aplica el efecto de desenfoque */
-    z-index: 0; /* Asegura que el fondo esté por debajo del contenido */
+    backdrop-filter: blur(4px);
+    z-index: 0;
+}
+
+/* Estilos específicos para cada sección Hero */
+.hero {
+    background-image: url('../img/fondo_ushuaia.jpg');
 }
 
 .hero_galery {
-    background-image: url('../img/galeria_imagenes.jpeg'); /* Asegúrate de que la ruta de la imagen sea correcta */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-    padding-top: 70px;
+    background-image: url('../img/galeria_imagenes.jpeg');
 }
 
 .hero_contact {
-    background-image: url('../img/ushuaia_contact.jpg'); /* Asegúrate de que la ruta de la imagen sea correcta */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-    padding-top: 70px;
-}
-.hero_food {
-    background-image: url('../img/Comida/background.jpg'); /* Asegúrate de que la ruta de la imagen sea correcta */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-    padding-top: 70px;
+    background-image: url('../img/ushuaia_contact.jpg');
 }
 
+.hero_food {
+    background-image: url('../img/Comida/background.jpg');
+}
+
+/* Estilo del contenido principal */
 .hero-principal {
-    z-index: 1; /* Hace que el contenido esté por encima del fondo desenfocado */
+    z-index: 1;
     padding: 2rem;
     max-width: 800px;
 }
@@ -137,16 +97,10 @@ html {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    z-index: 1; /* Asegura que el texto esté por encima del fondo */
+    z-index: 1;
 }
 
 /* Estilo del subtítulo (h2) */
-/*.hero h2, .hero_galery h2 {
-    font-size: 1.5rem;
-    font-weight: lighter;
-    z-index: 1; /* Asegura que el texto esté por encima del fondo 
-}*/
-
 .hero h2, .hero_galery h2, .hero_food h2 {
     font-size: 1.5rem;
     font-weight: lighter;
@@ -167,39 +121,30 @@ html {
     animation: fadeIn 2s ease-out;
 }
 
+/* Estilos del botón personalizado */
 .btn-custom {
-    background-color: #0056b3; /* Azul oscuro */
-    color: white; /* Texto en blanco */
-    font-weight: bold; /* Negrita */
-    border-radius: 25px; /* Bordes redondeados */
-    padding: 12px 30px; /* Mayor tamaño y padding */
-    transition: all 0.3s ease; /* Transición suave */
+    background-color: #0056b3;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
 }
 
-/* Efecto hover: cambio de color y sombra */
 .btn-custom:hover {
-    background-color: #00aaff; /* Cambio a un azul más claro al hacer hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
-    transform: translateY(-3px); /* Pequeño movimiento hacia arriba */
+    background-color: #00aaff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
-/* Efecto active: cuando se hace clic */
 .btn-custom:active {
-    background-color: #0056b3; /* Vuelve al color original */
-    transform: translateY(1px); /* Desplazamiento hacia abajo */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+    background-color: #0056b3;
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-
-/* Hasta aqui nada */
 
 /* Historia */
-
-/*#historia {
-    padding-top: 140px; /* Ajusta este valor según la altura de tu barra de navegación 
-}*/
-
 .historia {
-    /*margin: 2rem;*/
     padding: 10px;
 }
 
@@ -207,11 +152,11 @@ html {
     max-width: 100%;
     height: auto;
 }
-  
+
 img.rounded {
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 1rem; /* Espaciado inferior */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
 }
 
 .columna {
@@ -219,28 +164,26 @@ img.rounded {
 }
 
 /* Carousel */
-
 .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Asegura que la imagen cubra el espacio sin deformarse */
-    max-height: 600px;  /* Limita la altura de las imágenes */
-  }
-  
-  /* Mejora de la apariencia del caption */
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);  /* Fondo oscuro translúcido para mejorar la legibilidad */
+    object-fit: cover;
+    max-height: 600px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     padding: 15px;
-    color: white;  /* Asegura que el texto sea blanco */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);  /* Añade una sombra sutil para resaltar el caption */
-    backdrop-filter: blur(5px);  /* Fondo desenfocado para un mejor contraste */
-  }
-  
-  .carousel-indicators button {
-    background-color: #fff;  /* Botones de los indicadores en blanco */
-  }
-  
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.carousel-indicators button {
+    background-color: #fff;
+}
+
 /* Turismo */
 .turismo {
     padding: 20px;
@@ -251,83 +194,100 @@ img.rounded {
     font-weight: 400;
 }
 
+/* Estilo general para las cards */
 .card {
-    margin-bottom: 20px; /* Espacio entre las cards */
-    border-radius: 15px; /* Bordes redondeados */
+    margin-bottom: 20px;
+    border-radius: 15px;
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-width: 250px;
     height: 100%;
-    /*min-height: 350px;*/
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     background-color: rgb(6, 55, 128);
     color: white;
-    transform: translateY(-5px); /* Eleva ligeramente la card */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Agrega sombra más intensa */
-    transition: all 0.3s ease; /* Transición suave */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-  
-.card img {
+
+/* Estilos para las imágenes dentro de las cards */
+.card img,
+.card-img-top {
     width: 100%;
-    border-radius: 15px 15px 0 0; /* Bordes redondeados en la imagen */
+    border-radius: 15px 15px 0 0;
     transition: transform 0.3s ease;
 }
 
+/* Efecto de zoom */
 .card:hover img {
     transform: scale(1.1);
 }
 
 .card-img-top {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la card */
-    height: 200px; /* Ajusta la altura a un valor fijo */
-    object-fit: cover; /* Hace que la imagen se recorte para llenar el contenedor sin distorsionarse */
+    height: 200px;
+    object-fit: cover; /* Hace que la imagen cubra el espacio sin distorsionarse */
 }
 
 /* Estilo para los badges */
 .badge {
-    font-size: 0.85rem; /* Tamaño de fuente más pequeño */
-    padding: 0.5em 1em; /* Padding de los badges */
-    border-radius: 20px; /* Bordes redondeados */
+    font-size: 0.85rem;
+    padding: 0.5em 1em;
+    border-radius: 20px;
     position: absolute;
-    top: 15px; /* Posición en la parte superior */
-    right: 15px; /* Posición en la parte derecha */
-    z-index: 10; /* Asegura que el badge quede por encima de otros elementos */
-    font-weight: bold; /* Texto en negrita */
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    font-weight: bold;
 }
-  
+
+/* Estilos para el cuerpo de la card */
 .card-body {
     text-align: center;
 }
 
-/* Estilo para el botón */
+/* Estilo para el botón dentro del cuerpo de la card */
 .card-body > .btn-primary {
-    background-color: #0069d9; /* Color de fondo azul */
+    background-color: #0069d9;
     border: none;
     padding: 10px 20px;
-    border-radius: 25px; /* Bordes redondeados para el botón */
-    transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
-.card-body.btn-primary:hover {
-    background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+/* Efecto hover para el botón */
+.card-body .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Pie de pagina (footer) */
+/* Pie de página (footer) */
 
+/* Estilos generales para el footer */
 footer {
     min-height: 500px;
+    background: linear-gradient(135deg, #1b1b32, #33354a); /* Fondo degradado */
 }
 
-.footer-logo {
-    height: 120px;
-    width: 120px;
-    margin: 10px;
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
+/* Estilos generales para los enlaces dentro del footer */
+footer a {
+    color: white; /* Color por defecto */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el texto del footer */
 .footer-texto {
     font-size: 1.5rem;
     padding: 20px;
@@ -335,6 +295,7 @@ footer {
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Estilos para los iconos de redes sociales */
 .iconos-redes-sociales a {
     width: 50px;
     height: 50px;
@@ -354,6 +315,7 @@ footer {
     transition: all 0.2s ease-in;
 }
 
+/* Hover para los iconos de redes sociales */
 .iconos-redes-sociales a:hover {
     background-color: white;
     border: 2px solid rgb(13, 110, 253);
@@ -361,33 +323,6 @@ footer {
 
 .iconos-redes-sociales a:hover i {
     color: black;
-}
-
-.derechos-de-autor {
-    font-size: 15px;
-    color: #aeaeae;
-    padding: 20px;
-}
-
-/* Footer */
-
-footer {
-    background: linear-gradient(135deg, #1b1b32, #33354a); /* Fondo degradado */
-}
-
-footer h5 {
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-footer a {
-    color: white; /* Color por defecto */
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 /* Colores específicos para cada red social */
@@ -412,6 +347,20 @@ footer .bi:hover {
     color: #00aaff; /* Azul para hover */
     transform: scale(1.1); /* Ligera animación */
     transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para derechos de autor */
+.derechos-de-autor {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
+/* Estilos para el logo del footer */
+.footer-logo {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
 }
 
 /* Estilo para los títulos del acordeón */
@@ -549,69 +498,100 @@ textarea.form-control {
     color: #dc3545;
 }
 
-/* Galeria de imagenes */
+.custom-select {
+    position: relative;
+    width: 100%;
+    max-width: 220px;
+    cursor: pointer;
+}
 
-/* Galería CSS */
+.selected-option {
+    border: 1px solid #ced4da;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Centra la bandera y el texto verticalmente */
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: #fff;
+    gap: 10px; /* Espaciado entre la bandera y el texto */
+}
+
+.options-container {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.option {
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: start; /* Asegura que todo el contenido esté alineado a la izquierda */
+    gap: 10px; /* Espaciado entre la bandera y el texto */
+    cursor: pointer;
+}
+
+.option span:last-child {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el texto */
+    align-items: center; /* Centra verticalmente el texto */
+    width: 100%; /* Hace que el texto ocupe todo el ancho disponible */
+    text-align: center; /* Centra el texto */
+}
+
+.option:hover {
+    background-color: #f8f9fa;
+}
+
+.flag-icon {
+    width: 20px;
+    height: 15px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+/* Galeria de imagenes */
 
 .galeria-grid {
     display: grid;
     grid-template-areas:
-      "area1 area2 area3"
-      "area4 area5 area3"
-      "area4 area6 area7"
-      "area8 area8 area9"
-      "area10 area11 area9"
-      "area10 area12 area13";
-    gap: 15px; /* Espacio entre imágenes */
+        "area1 area2 area3"
+        "area4 area5 area3"
+        "area4 area6 area7"
+        "area8 area8 area9"
+        "area10 area11 area9"
+        "area10 area12 area13";
+    gap: 15px;
     justify-content: center;
-  }
+}
 
-  .galeria-grid img {
+.galeria-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-  }
+}
 
-  .galeria-grid .area1 { grid-area: area1; }
-  .galeria-grid .area2 { grid-area: area2; }
-  .galeria-grid .area3 { grid-area: area3; }
-  .galeria-grid .area4 { grid-area: area4; }
-  .galeria-grid .area5 { grid-area: area5; }
-  .galeria-grid .area6 { grid-area: area6; }
-  .galeria-grid .area7 { grid-area: area7; }
-  .galeria-grid .area8 { grid-area: area8; }
-  .galeria-grid .area9 { grid-area: area9; }
-  .galeria-grid .area10 { grid-area: area10; }
-  .galeria-grid .area11 { grid-area: area11; }
-  .galeria-grid .area12 { grid-area: area12; }
-  .galeria-grid .area13 { grid-area: area13; }
-
-
-/*.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;  Espacio entre imágenes 
-    justify-content: center;
-  }*/
-  
-  /*.galeria-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .galeria-grid img.row-span-2 {
-    grid-row: span 2;
-  }
-
-  .galeria-grid img.col-span-2 {
-    grid-column: span 2;
-  }*/
-
-
-/* Adaptable (Responsivo) */
+.galeria-grid .area1 { grid-area: area1; }
+.galeria-grid .area2 { grid-area: area2; }
+.galeria-grid .area3 { grid-area: area3; }
+.galeria-grid .area4 { grid-area: area4; }
+.galeria-grid .area5 { grid-area: area5; }
+.galeria-grid .area6 { grid-area: area6; }
+.galeria-grid .area7 { grid-area: area7; }
+.galeria-grid .area8 { grid-area: area8; }
+.galeria-grid .area9 { grid-area: area9; }
+.galeria-grid .area10 { grid-area: area10; }
+.galeria-grid .area11 { grid-area: area11; }
+.galeria-grid .area12 { grid-area: area12; }
+.galeria-grid .area13 { grid-area: area13; }
 
 @media screen and (max-width: 1200px) {
     .columna img {
@@ -626,24 +606,6 @@ textarea.form-control {
     .columna img {
         width: 400px;
     }
-    .galeria-grid {
-        grid-template-areas:
-          "area1 area3"
-          "area2 area3"
-          "area4 area5"
-          "area4 area6"
-          "area7 area11"
-          "area8 area8"
-          "area9 area10"
-          "area9 area10"
-          "area12 area13";
-      }
-
-      
-      /*.custom-grid .col-md-6 {
-        width: 100%;   Esto es opcional, ya lo hace Bootstrap 
-        gap: 10px;
-      }*/
 
 }
 @media screen and (max-width: 767px) {
@@ -661,30 +623,6 @@ textarea.form-control {
         justify-content: center;
         align-items: center;
     }
-    /*.container {
-        width: 100%;
-        margin: 0 15px;
-    }*/
-    .galeria-grid {
-        grid-template-areas:
-          "area1"
-          "area2"
-          "area3"
-          "area3"
-          "area5"
-          "area6"
-          "area4"
-          "area4"
-          "area7"
-          "area8"
-          "area9"
-          "area9"
-          "area10"
-          "area10"
-          "area11"
-          "area12"
-          "area13";
-      }
 }
 
 @media screen and (max-width: 576px) {
