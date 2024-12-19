@@ -606,6 +606,9 @@ textarea.form-control {
     .columna img {
         width: 400px;
     }
+    .custom-select {
+        width: auto;
+    }
 
 }
 @media screen and (max-width: 767px) {
