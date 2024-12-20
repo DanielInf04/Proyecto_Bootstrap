@@ -728,8 +728,8 @@ textarea.form-control {
         font-weight: bold;
         margin-bottom: 0;
     }
-    .galeria:hover .overlay {
-        opacity: 0; /* Desactiva la superposición en dispositivos táctiles */
+    .galeria img {
+        transition: none; /* Elimina la transición de opacidad en dispositivos táctiles */
       }
     .galeria-grid {
         grid-template-areas:
