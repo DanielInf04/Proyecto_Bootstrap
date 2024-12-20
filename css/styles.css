@@ -707,6 +707,9 @@ textarea.form-control {
         justify-content: center;
         align-items: center;
     }
+    .galeria:hover .overlay {
+        opacity: 0; /* Desactiva la superposición en dispositivos táctiles */
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -725,6 +728,9 @@ textarea.form-control {
         font-weight: bold;
         margin-bottom: 0;
     }
+    .galeria:hover .overlay {
+        opacity: 0; /* Desactiva la superposición en dispositivos táctiles */
+      }
     .galeria-grid {
         grid-template-areas:
             "area1"
