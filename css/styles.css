@@ -628,15 +628,15 @@ textarea.form-control {
     border-radius: 8px;
   }
   
-  /*.overlay p {
+  .overlay p {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 0;
-}*/
+}
   
-  /*.galeria:hover .overlay {
+  .galeria:hover .overlay {
     opacity: 1;
-  }*/
+  }
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -723,14 +723,9 @@ textarea.form-control {
         border-radius: 8px;
         margin: 0 auto; /* Centra la imagen dentro de su contenedor */
     }
-    .overlay p {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 0;
+    .overlay {
+        visibility: hidden;
     }
-    .galeria:hover img {
-        opacity: 1; /* Restablecer la opacidad de la imagen a su valor original */
-      }
     .galeria-grid {
         grid-template-areas:
             "area1"
