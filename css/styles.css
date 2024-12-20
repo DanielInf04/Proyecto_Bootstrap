@@ -634,9 +634,9 @@ textarea.form-control {
     margin-bottom: 0;
 }
   
-  .galeria:hover .overlay {
+  /*.galeria:hover .overlay {
     opacity: 1;
-  }
+  }*/
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
