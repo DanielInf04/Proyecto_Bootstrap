@@ -728,8 +728,8 @@ textarea.form-control {
         font-weight: bold;
         margin-bottom: 0;
     }
-    .galeria img {
-        transition: none; /* Elimina la transición de opacidad en dispositivos táctiles */
+    .galeria:hover img {
+        opacity: 1; /* Restablecer la opacidad de la imagen a su valor original */
       }
     .galeria-grid {
         grid-template-areas:
