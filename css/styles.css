@@ -725,10 +725,6 @@ textarea.form-control {
         margin-bottom: 0;
     }
     .galeria:hover img {
-        opacity: 0.2;
-      }
-      
-      .galeria:hover .overlay {
         opacity: 1;
       }
     .galeria-grid {
