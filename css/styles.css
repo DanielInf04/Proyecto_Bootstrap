@@ -21,6 +21,10 @@
     color: #0056b3;
 }
 
+.logo-img {
+    width: 90px;
+}
+
 body, html {
     overflow-x: hidden;
 }
@@ -707,12 +711,33 @@ textarea.form-control {
         justify-content: center;
         align-items: center;
     }
-    .galeria:hover .overlay {
-        opacity: 0; /* Desactiva la superposición en dispositivos táctiles */
-    }
+    .navbar .logo-img {
+        width: 80px; /* Reducir el tamaño del logo en pantallas pequeñas */
+      }
+    
+      .navbar {
+        padding: 5px 0; /* Reducir el padding del navbar */
+      }
+    
+      .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+        padding: 5px 10px; /* Reducir el padding de los links */
+      }
 }
 
 @media screen and (max-width: 576px) {
+    .navbar .logo-img {
+        width: 65px; /* Más pequeño en dispositivos más pequeños */
+      }
+    
+      .navbar-nav .nav-link {
+        font-size: 0.8rem; /* Más pequeño el tamaño de la fuente */
+        padding: 4px 8px; /* Menos padding en los links */
+      }
+    
+      .navbar-toggler {
+        margin-right: 10px; /* Ajustar la posición del botón de toggler */
+      }
     #contact-form {
         margin: 0 15px;
     }
