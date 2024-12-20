@@ -607,7 +607,7 @@ textarea.form-control {
     transition: all 0.2s ease;
   }
   
-  .galeria:hover img {
+  /*.galeria:hover img {
     opacity: 0.2;
   }
   
@@ -636,7 +636,7 @@ textarea.form-control {
   
   .galeria:hover .overlay {
     opacity: 1;
-  }
+  }*/
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -722,9 +722,6 @@ textarea.form-control {
         object-fit: cover;
         border-radius: 8px;
         margin: 0 auto; /* Centra la imagen dentro de su contenedor */
-    }
-    .overlay {
-        visibility: hidden;
     }
     .galeria-grid {
         grid-template-areas:
