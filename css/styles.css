@@ -744,6 +744,17 @@ textarea.form-control {
     .navbar .logo-img {
         width: 65px; /* Más pequeño en dispositivos más pequeños */
       }
+    /* Estilo del título (h1) */
+    .hero h1, .hero_galery h1, .hero_food h1, .hero_contact h1 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    /* Estilo del subtítulo (h2) */
+    .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del subtítulo */
+        line-height: 1.3; /* Ajusta el espaciado entre líneas */
+        padding: 0.3rem 0.8rem; /* Ajusta el padding */
+    }
     #contact-form {
         margin: 0 15px;
     }
@@ -776,22 +787,5 @@ textarea.form-control {
     #whatsappBtn i {
         font-size: 23px; /* Tamaño intermedio del ícono */
     }
-
-    /*.galeria-card {
-        grid-template-areas:
-            "area1"
-            "area2"
-            "area3"
-            "area4"
-            "area5"
-            "area6"
-            "area7"
-            "area8"
-            "area9"
-            "area10"
-            "area11"
-            "area12"
-            "area13";
-    }*/
     
 }
