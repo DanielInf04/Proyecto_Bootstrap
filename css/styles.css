@@ -767,6 +767,16 @@ textarea.form-control {
     #contacto {
         width: 95%;
     }
+
+    #whatsappBtn {
+        width: 55px; /* Tamaño intermedio para pantallas pequeñas */
+        height: 55px; /* Tamaño intermedio para pantallas pequeñas */
+    }
+
+    #whatsappBtn i {
+        font-size: 23px; /* Tamaño intermedio del ícono */
+    }
+
     /*.galeria-card {
         grid-template-areas:
             "area1"
