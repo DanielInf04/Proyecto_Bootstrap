@@ -757,7 +757,7 @@ textarea.form-control {
     }
     .btn-custom {
         padding: 10px 20px; /* Ajuste cómodo para pantallas pequeñas */
-        font-size: 0.875rem; /* Tamaño de fuente más pequeño (14px) */
+        font-size: 1rem; /* Tamaño de fuente más pequeño (14px) */
         border-radius: 20px; /* Reduce ligeramente el redondeo */
     }
     #contact-form {
