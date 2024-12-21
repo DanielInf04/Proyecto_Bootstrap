@@ -36,7 +36,7 @@ html {
 
 /* Estilos generales */
 
-h1, h2, h5, p {
+* {
     font-family: "Poppins", serif;
 }
 
@@ -115,7 +115,7 @@ h1, h2, h5, p {
 .hero-principal {
     z-index: 1;
     padding: 2rem;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 /* Estilo del título (h1) */
@@ -705,6 +705,23 @@ textarea.form-control {
 }
 
 @media screen and (max-width: 991px) {
+    .hero h1, .hero_galery h1, .hero_food h1, .hero_contact h1 {
+        font-size: 2.5rem; /* Ajuste intermedio, mayor que en pantallas pequeñas */
+    }
+
+    /* Estilo del subtítulo (h2) en pantallas de hasta 991px */
+    .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
+        font-size: 1.3rem; /* Ajuste intermedio */
+        line-height: 1.4; /* Mantiene el espaciado adecuado */
+        padding: 0.4rem 1rem; /* Reduce ligeramente el padding */
+    }
+
+    /* Estilo del botón personalizado (btn-custom) en pantallas de hasta 991px */
+    .btn-custom {
+        padding: 12px 25px; /* Ajuste el padding para pantallas medianas */
+        font-size: 1.1rem; /* Reduce un poco el tamaño de la fuente */
+        border-radius: 20px; /* Mantén un borde redondeado, pero no tan grande */
+    }
     .columna img {
         width: 400px;
     }
@@ -715,16 +732,6 @@ textarea.form-control {
         display: flex;
         flex-direction: column;
     }
-    /*.galeria-grid {
-        grid-template-areas:
-            "area1 area2"
-            "area3 area4"
-            "area5 area6"
-            "area7 area9"
-            "area8 area8"
-            "area10 area11"
-            "area12 area13";
-    }*/
 
 }
 @media screen and (max-width: 767px) {
