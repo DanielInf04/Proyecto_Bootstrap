@@ -18,6 +18,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_up" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,7 +28,7 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid d-flex align-items-center">
       <!-- Logo a la izquierda -->
-      <a class="navbar-brand logo" href="#">
+      <a class="navbar-brand logo" href="index.html">
         <img src="img/logo_sinfondo.png" alt="Logo de Ushuaia" class="logo-img">
       </a>
       <!-- Botón de toggler (solo visible en pantallas pequeñas) -->
@@ -165,7 +166,8 @@
   </section>
 
   <section id="turismo" class="historia seccion-oscura">
-    <h2 class="text-center mt-4 mb-5">Atractivos Turísticos de Ushuaia</h2>
+    <h2 class="text-center mt-4 mb-4">Atractivos Turísticos de Ushuaia</h2>
+    <p class="text-center text-muted mb-5 descripcion-seccion texto-blanco">Ushuaia, la ciudad más austral del mundo, te invita a explorar paisajes naturales únicos, aventuras al aire libre y experiencias inolvidables. Desde el Parque Nacional Tierra del Fuego hasta el Canal Beagle, descubre lo mejor de la Patagonia.</p>
     <div class="container g-4">
         <div class="row">
             <!-- Columna 1 con card -->
@@ -477,8 +479,14 @@
     </div>
 </footer>
 
-<button id="scrollToTopBtn">
+<!-- <button id="scrollToTopBtn">
   <i class="bi bi-arrow-up"></i>
+</button> -->
+
+<button id="scrollToTopBtn">
+  <span class="material-symbols-outlined">
+    keyboard_arrow_up
+  </span>
 </button>
 
 <script src="./js/utils.js"></script>
