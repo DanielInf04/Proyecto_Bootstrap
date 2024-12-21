@@ -751,7 +751,7 @@ textarea.form-control {
 
     /* Estilo del subtítulo (h2) */
     .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
-        font-size: 1.2rem; /* Reduce el tamaño del subtítulo */
+        font-size: 1.15rem; /* Reduce el tamaño del subtítulo */
         line-height: 1.3; /* Ajusta el espaciado entre líneas */
         padding: 0.3rem 0.8rem; /* Ajusta el padding */
     }
