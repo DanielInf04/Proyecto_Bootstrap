@@ -657,6 +657,34 @@ textarea.form-control {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
   }
 
+  #whatsappBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; /* Ajusta el tamaño */
+    height: 60px; /* Ajusta el tamaño */
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px; /* Ajusta el tamaño del ícono */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#whatsappBtn:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en el hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+#whatsappBtn i {
+    font-size: 28px; /* Ajusta el tamaño del ícono */
+}
+
 
 
 @media screen and (max-width: 1200px) {
@@ -674,6 +702,10 @@ textarea.form-control {
     }
     .custom-select {
         width: auto;
+    }
+    .logo-desc-footer {
+        display: flex;
+        flex-direction: column;
     }
     /*.galeria-grid {
         grid-template-areas:
@@ -721,9 +753,18 @@ textarea.form-control {
         border-radius: 8px;
         margin: 0 auto; /* Centra la imagen dentro de su contenedor */
     }
+    .desc-footer {
+        text-align: center;
+    }
+    #footer {
+        padding: 0 15px;
+    }
     #galeria, #food {
         width: 92%;
         margin: 0 auto;
+    }
+    #contacto {
+        width: 95%;
     }
     /*.galeria-card {
         grid-template-areas:
