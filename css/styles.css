@@ -114,6 +114,7 @@ html {
 
 /* Estilo del título (h1) */
 .hero h1, .hero_galery h1, .hero_food h1, .hero_contact h1 {
+    font-family: "Poppins", serif;
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -122,6 +123,7 @@ html {
 
 /* Estilo del subtítulo (h2) */
  .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
+    font-family: "Poppins", serif;
     font-size: 1.5rem;
     font-weight: 500;
     color: #fff;
@@ -143,6 +145,7 @@ html {
 
 /* Estilos del botón personalizado */
 .btn-custom {
+    font-family: "Poppins", serif;
     background-color: #0056b3;
     color: white;
     font-weight: bold;
@@ -751,13 +754,13 @@ textarea.form-control {
 
     /* Estilo del subtítulo (h2) */
     .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
-        font-size: 1.1rem; /* Reduce el tamaño del subtítulo */
+        font-size: 1rem; /* Reduce el tamaño del subtítulo */
         line-height: 1.3; /* Ajusta el espaciado entre líneas */
         padding: 0.3rem 0.8rem; /* Ajusta el padding */
     }
     .btn-custom {
         padding: 10px 20px; /* Ajuste cómodo para pantallas pequeñas */
-        font-size: 1.1rem; /* Tamaño de fuente más pequeño (14px) */
+        font-size: 1.05rem; /* Tamaño de fuente más pequeño (14px) */
         border-radius: 20px; /* Reduce ligeramente el redondeo */
     }
     #contact-form {
