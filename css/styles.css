@@ -57,6 +57,7 @@ html {
 }
 
 .texto-blanco {
+    width: 90%;
     color: white !important;
 }
 
