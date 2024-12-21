@@ -762,6 +762,11 @@ textarea.form-control {
     .navbar .logo-img {
         width: 65px; /* Más pequeño en dispositivos más pequeños */
       }
+
+      .navbar .navbar-nav .nav-link {
+        font-size: 1rem; /* Tamaño más pequeño */
+        padding: 0.3rem 0.8rem; /* Ajuste de padding */
+    }
     /* Estilo del título (h1) */
     .hero h1, .hero_galery h1, .hero_food h1, .hero_contact h1 {
         font-size: 2rem; /* Reduce el tamaño del título */
