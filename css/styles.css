@@ -31,7 +31,7 @@ body, html {
 
 /* Corrección visual del contenido al presionar un enlace */
 html {
-    scroll-padding-top: 110px;
+    scroll-padding-top: 115px;
 }
 
 /* Estilos generales */
@@ -171,8 +171,12 @@ html {
 }
 
 /* Historia */
-.historia {
-    padding: 10px;
+#historia {
+    padding: 15px;
+}
+
+#historia img {
+    padding: 0 15px;
 }
 
 .img-fluid {
