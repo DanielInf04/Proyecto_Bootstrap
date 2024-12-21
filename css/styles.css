@@ -121,9 +121,9 @@ html {
 }
 
 /* Estilo del subtítulo (h2) */
-.hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
+ .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: 500;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     line-height: 1.4;
@@ -133,7 +133,7 @@ html {
     display: inline-block;
     border-radius: 5px;
     z-index: 1;
-}
+} 
 
 /* Estilo de texto cuando se hace scroll */
 .hero-principal h1,
