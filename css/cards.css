@@ -1,0 +1,159 @@
+/* Estilos generales para la galería */
+.galeria-seccion {
+    background-color: #f8f9fa;  /* Fondo claro para la sección */
+    padding: 50px 0;
+}
+
+.galeria-seccion h2 {
+    font-size: 2.5rem;  /* Tamaño grande para el título */
+    color: #333;  /* Color oscuro para el título */
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Contenedor principal de la galería */
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-areas:
+        "area1 area2 area3"
+        "area4 area5 area3"
+        "area4 area6 area7"
+        "area8 area8 area9"
+        "area10 area11 area9"
+        "area10 area12 area13";
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.galeria-grid .area1 { grid-area: area1; }
+.galeria-grid .area2 { grid-area: area2; }
+.galeria-grid .area3 { grid-area: area3; }
+.galeria-grid .area4 { grid-area: area4; }
+.galeria-grid .area5 { grid-area: area5; }
+.galeria-grid .area6 { grid-area: area6; }
+.galeria-grid .area7 { grid-area: area7; }
+.galeria-grid .area8 { grid-area: area8; }
+.galeria-grid .area9 { grid-area: area9; }
+.galeria-grid .area10 { grid-area: area10; }
+.galeria-grid .area11 { grid-area: area11; }
+.galeria-grid .area12 { grid-area: area12; }
+.galeria-grid .area13 { grid-area: area13; }
+
+/* Estilo para la card */
+.card-galery {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff; /* Fondo blanco por defecto */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Aumentamos la sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto de hover */
+.card-galery:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25); /* Sombra más fuerte al hacer hover */
+    background-color: transparent; /* Fondo transparente al hacer hover */
+}
+
+/* Estilo para la imagen */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover sobre la imagen */
+.card-galery:hover .card-img {
+    transform: scale(1.05);
+}
+
+/* Cuerpo de la card */
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-galery img {
+    border-radius: 12px 12px 0 0;
+}
+
+/* Texto de la card */
+.card-text {
+    font-size: 16px;
+    color: #000 !important;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+/* Cambiar color del texto a negro al hacer hover */
+.card-galery:hover .card-text {
+    color: #000; /* Texto negro al hacer hover */
+}
+
+/* Estilos adicionales para que las cards se vean mejor al redimensionar */
+/*@media (max-width: 767px) {
+    .card-galery {
+        width: 90%;
+    }
+}*/
+
+@media screen and (max-width: 991px) {
+
+    .galeria-grid {
+        grid-template-areas:
+        "area1 area2"
+        "area3 area4"
+        "area5 area6"
+        "area7 area9"
+        "area8 area8"
+        "area10 area11"
+        "area12 area13";
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .galeria-grid {
+        grid-template-areas:
+            "area1"
+            "area2"
+            "area3"
+            "area4"
+            "area5"
+            "area6"
+            "area7"
+            "area8"
+            "area9"
+            "area10"
+            "area11"
+            "area12"
+            "area13";
+    }
+    #galeria {
+        width: 92%;
+        margin: 0 auto;
+    }
+    
+}

@@ -31,7 +31,7 @@ body, html {
 
 /* Corrección visual del contenido al presionar un enlace */
 html {
-    scroll-padding-top: 114px;
+    scroll-padding-top: 110px;
 }
 
 /* Estilos generales */
@@ -43,6 +43,17 @@ html {
 .seccion-oscura {
     color: white;
     background-color: #1b1b32;
+}
+
+.descripcion-seccion {
+    font-size: 1.2rem;
+    color: #6c757d; /* Color gris suave */
+    font-style: italic;
+    margin-bottom: 40px;
+    max-width: 800px; /* Limitar el ancho */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 /* Estilos comunes para las secciones Hero */
@@ -346,9 +357,27 @@ footer .bi-youtube {
     color: #FF0000; /* Rojo de YouTube */
 }
 
-/* Hover genérico para todos los íconos */
-footer .bi:hover {
-    color: #00aaff; /* Azul para hover */
+/* Hover específico para cada red social */
+footer .bi-facebook:hover {
+    color: #3b5998; /* Azul oscuro de Facebook en hover */
+    transform: scale(1.1); /* Ligera animación */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .bi-instagram:hover {
+    color: #E1306C; /* Rosa más claro de Instagram en hover */
+    transform: scale(1.1); /* Ligera animación */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .bi-twitter-x:hover {
+    color: #1DA1F2; /* Azul de Twitter en hover */
+    transform: scale(1.1); /* Ligera animación */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .bi-youtube:hover {
+    color: #FF0000; /* Rojo de YouTube en hover */
     transform: scale(1.1); /* Ligera animación */
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -563,7 +592,7 @@ textarea.form-control {
 
 /* Galeria de imagenes */
 
-.galeria-grid {
+/*.galeria-grid {
     display: grid;
     grid-template-areas:
         "area1 area2 area3"
@@ -595,52 +624,9 @@ textarea.form-control {
 .galeria-grid .area10 { grid-area: area10; }
 .galeria-grid .area11 { grid-area: area11; }
 .galeria-grid .area12 { grid-area: area12; }
-.galeria-grid .area13 { grid-area: area13; }
+.galeria-grid .area13 { grid-area: area13; }*/
+  
 
-.galeria {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .galeria img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    transition: all 0.2s ease;
-  }
-  
-  /*.galeria:hover img {
-    opacity: 0.2;
-  }
-  
-  .overlay {
-    transition: all 0.4s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 252, 252, 0.1);
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-  }
-  
-  .overlay p {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-  
-  .galeria:hover .overlay {
-    opacity: 1;
-  }*/
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -679,7 +665,7 @@ textarea.form-control {
     .custom-select {
         width: auto;
     }
-    .galeria-grid {
+    /*.galeria-grid {
         grid-template-areas:
             "area1 area2"
             "area3 area4"
@@ -688,12 +674,7 @@ textarea.form-control {
             "area8 area8"
             "area10 area11"
             "area12 area13";
-    }
-    .overlay p {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 0;
-    }
+    }*/
 
 }
 @media screen and (max-width: 767px) {
@@ -730,7 +711,11 @@ textarea.form-control {
         border-radius: 8px;
         margin: 0 auto; /* Centra la imagen dentro de su contenedor */
     }
-    .galeria-grid {
+    #galeria, #food {
+        width: 92%;
+        margin: 0 auto;
+    }
+    /*.galeria-card {
         grid-template-areas:
             "area1"
             "area2"
@@ -745,6 +730,6 @@ textarea.form-control {
             "area11"
             "area12"
             "area13";
-    }
+    }*/
     
 }
