@@ -746,7 +746,6 @@ textarea.form-control {
       }
     .hero, .hero_galery, .hero_contact, .hero_food {
         min-height: 100dvh; /* Sustituye 'svh' por 'dvh' si quieres incluir dinámicas */
-        height: 100dvh; /* Esto ajusta el contenedor al alto visible del móvil */
     }
     /* Estilo del título (h1) */
     .hero h1, .hero_galery h1, .hero_food h1, .hero_contact h1 {
