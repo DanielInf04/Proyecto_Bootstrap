@@ -1,0 +1,72 @@
+/* Estilos para la Página de Inicio */
+
+/* Estilos de la Sección Historia */
+
+#historia {
+    padding: 15px;
+}
+
+#historia img {
+    padding: 0 15px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+img.rounded {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.columna {
+    padding: 20px;
+}
+
+/* Estilos para el Carousel */
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 600px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.carousel-indicators button {
+    background-color: #fff;
+}
+
+/* Estilos para la Sección Atractivos Turísticos */
+
+#turismo {
+    padding: 20px;
+}
+
+#turismo h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+/* Estilos de los badges de las cards - Sección Turismo */
+
+.badge {
+    font-size: 0.85rem;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    font-weight: bold;
+}

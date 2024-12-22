@@ -25,3 +25,25 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(function(item) {
         }
     });
 });
+
+function limpiarFormulario() {
+    // Resetea el formulario
+    document.getElementById('contact-form').reset();
+  
+    var fechaInput = document.getElementById('fecha');
+    var fechaActual = new Date().toISOString().split('T')[0];
+
+    fechaInput.value = fechaActual;
+
+    // Elimina las clases de validación de todos los campos de texto y selectores
+    const inputs = document.querySelectorAll('.form-control, .form-select');
+    inputs.forEach(input => {
+      input.classList.remove('is-invalid', 'is-valid'); // Eliminar las clases de validación
+    });
+  
+    // Eliminar los mensajes de error
+    const feedbacks = document.querySelectorAll('.invalid-feedback');
+    feedbacks.forEach(feedback => {
+      feedback.style.display = 'none'; // Ocultar los mensajes de error
+    });
+  }

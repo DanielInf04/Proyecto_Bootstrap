@@ -1,43 +1,11 @@
-/* Barra de navegación */
-.navbar {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-}
+/* Estilos Generales */
 
-.navbar-nav {
-    font-weight: bold;
-    gap: 2rem;
-}
-
-.navbar-nav .nav-item .nav-link {
-    font-size: 1.05rem;
-    color: black;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-item .nav-link:hover,
-.navbar-nav .nav-item .nav-link.active {
-    color: #0056b3;
-}
-
-.logo-img {
-    width: 90px;
+* {
+    font-family: "Poppins", serif;
 }
 
 body, html {
     overflow-x: hidden;
-}
-
-/* Corrección visual del contenido al presionar un enlace */
-/*html {
-    scroll-padding-top: 95px;
-}*/
-
-/* Estilos generales */
-
-* {
-    font-family: "Poppins", serif;
 }
 
 .seccion-clara {
@@ -67,7 +35,92 @@ body, html {
     color: white !important;
 }
 
-/* Estilos comunes para las secciones Hero */
+/* Estilo general de las Cards */
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    background-color: rgb(6, 55, 128);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las imágenes dentro de las cards */
+
+.card img,
+.card-img-top {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de zoom en la imagen al pasar el mouse */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Hace que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Estilos para el cuerpo de la card y el botón */
+
+.card-body {
+    text-align: center;
+}
+
+.card-body > .btn-primary {
+    background-color: #0069d9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.card-body .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.navbar-nav {
+    font-weight: bold;
+    gap: 2rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.05rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+    color: #0056b3;
+}
+
+.logo-img {
+    width: 90px;
+}
+
+/* Secciones Hero */
 .hero, .hero_galery, .hero_contact, .hero_food {
     background-size: cover;
     background-position: center;
@@ -111,14 +164,14 @@ body, html {
     background-image: url('../img/Comida/background.jpg');
 }
 
-/* Estilo del contenido principal */
+/* Estilo del contenido y texto en las secciones Hero */
+
 .hero-principal {
     z-index: 1;
     padding: 2rem;
     max-width: 900px;
 }
 
-/* Estilo del título (h1) */
 .hero h1, .hero_galery h1, .hero_food h1, .hero_contact h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -126,7 +179,6 @@ body, html {
     z-index: 1;
 }
 
-/* Estilo del subtítulo (h2) */
  .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
     font-size: 1.5rem;
     font-weight: 500;
@@ -141,13 +193,13 @@ body, html {
     z-index: 1;
 } 
 
-/* Estilo de texto cuando se hace scroll */
 .hero-principal h1,
 .hero-principal h2 {
     animation: fadeIn 2s ease-out;
 }
 
 /* Estilos del botón personalizado */
+
 .btn-custom {
     font-family: "Poppins", serif;
     background-color: #0056b3;
@@ -170,137 +222,8 @@ body, html {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Historia */
-#historia {
-    padding: 15px;
-}
+/* Estilos generales para el pie de página (footer) */
 
-#historia img {
-    padding: 0 15px;
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-img.rounded {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-}
-
-.columna {
-    padding: 20px;
-}
-
-/* Carousel */
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-height: 600px;
-}
-
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    padding: 15px;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-}
-
-.carousel-indicators button {
-    background-color: #fff;
-}
-
-/* Turismo */
-/*.turismo {
-    padding: 20px;
-}*/
-
-#turismo {
-    padding: 20px;
-}
-
-#turismo h2 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-}
-
-/* Estilo general para las cards */
-.card {
-    margin-bottom: 20px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 250px;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    background-color: rgb(6, 55, 128);
-    color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para las imágenes dentro de las cards */
-.card img,
-.card-img-top {
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-    transition: transform 0.3s ease;
-}
-
-/* Efecto de zoom */
-.card:hover img {
-    transform: scale(1.1);
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover; /* Hace que la imagen cubra el espacio sin distorsionarse */
-}
-
-/* Estilo para los badges */
-.badge {
-    font-size: 0.85rem;
-    padding: 0.5em 1em;
-    border-radius: 20px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 1;
-    font-weight: bold;
-}
-
-/* Estilos para el cuerpo de la card */
-.card-body {
-    text-align: center;
-}
-
-/* Estilo para el botón dentro del cuerpo de la card */
-.card-body > .btn-primary {
-    background-color: #0069d9;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-/* Efecto hover para el botón */
-.card-body .btn-primary:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Pie de página (footer) */
-
-/* Estilos generales para el footer */
 footer {
     min-height: 500px;
     background: linear-gradient(135deg, #1b1b32, #33354a); /* Fondo degradado */
@@ -313,8 +236,9 @@ footer h5 {
 }
 
 /* Estilos generales para los enlaces dentro del footer */
+
 footer a {
-    color: white; /* Color por defecto */
+    color: white;
     text-decoration: none;
 }
 
@@ -322,7 +246,16 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Estilos para el logo del footer */
+
+.footer-logo {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+}
+
 /* Estilos para el texto del footer */
+
 .footer-texto {
     font-size: 1.5rem;
     padding: 20px;
@@ -331,6 +264,7 @@ footer a:hover {
 }
 
 /* Estilos para los iconos de redes sociales */
+
 .iconos-redes-sociales a {
     width: 50px;
     height: 50px;
@@ -350,7 +284,6 @@ footer a:hover {
     transition: all 0.2s ease-in;
 }
 
-/* Hover para los iconos de redes sociales */
 .iconos-redes-sociales a:hover {
     background-color: white;
     border: 2px solid rgb(13, 110, 253);
@@ -360,46 +293,48 @@ footer a:hover {
     color: black;
 }
 
-/* Colores específicos para cada red social */
+/* Colores específicos para cada Red Social */
+
 footer .bi-facebook {
-    color: #4267B2; /* Azul de Facebook */
+    color: #4267B2;
 }
 
 footer .bi-instagram {
-    color: #C13584; /* Rosa de Instagram */
+    color: #C13584;
 }
 
 footer .bi-twitter-x {
-    color: #1DA1F2; /* Azul de Twitter */
+    color: #1DA1F2;
 }
 
 footer .bi-youtube {
-    color: #FF0000; /* Rojo de YouTube */
+    color: #FF0000;
 }
 
-/* Hover específico para cada red social */
+/* Hover específico para cada Red Social */
+
+footer .bi-facebook:hover,
+footer .bi-instagram:hover,
+footer .bi-twitter-x:hover,
+footer .bi-youtube:hover {
+    transform: scale(1.1);;
+    transition: transform 0.3s ease;
+}
+
 footer .bi-facebook:hover {
-    color: #3b5998; /* Azul oscuro de Facebook en hover */
-    transform: scale(1.1); /* Ligera animación */
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #3b5998;
 }
 
 footer .bi-instagram:hover {
-    color: #E1306C; /* Rosa más claro de Instagram en hover */
-    transform: scale(1.1); /* Ligera animación */
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #E1306C; 
 }
 
 footer .bi-twitter-x:hover {
-    color: #1DA1F2; /* Azul de Twitter en hover */
-    transform: scale(1.1); /* Ligera animación */
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #1DA1F2;
 }
 
 footer .bi-youtube:hover {
-    color: #FF0000; /* Rojo de YouTube en hover */
-    transform: scale(1.1); /* Ligera animación */
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #FF0000;
 }
 
 /* Estilos para derechos de autor */
@@ -409,71 +344,64 @@ footer .bi-youtube:hover {
     padding: 20px;
 }
 
-/* Estilos para el logo del footer */
-.footer-logo {
-    height: 120px;
-    width: 120px;
-    margin: 10px;
-}
+/* Estilos para el acordeón en el footer */
 
-/* Estilo para los títulos del acordeón */
 .accordion-header .accordion-button {
-    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
-    font-weight: 600; /* Negrita moderada */
-    font-size: 1.1rem; /* Tamaño de letra ligeramente más grande */
-    color: #ffffff; /* Texto blanco para mayor contraste */
-    background-color: #2b2e38; /* Color oscuro acorde al footer */
-    border: none; /* Elimina el borde */
-    transition: background-color 0.3s ease; /* Efecto suave al interactuar */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #2b2e38;
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
 .accordion-header .accordion-button:hover {
-    background-color: #44485a; /* Color más claro al pasar el mouse */
+    background-color: #44485a;
 }
 
-/* Estilo general del acordeón */
 .accordion-item {
-    background-color: #2C2F3F; /* Fondo oscuro similar al footer */
-    border: 1px solid #3B4C5A; /* Borde sutil */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-bottom: 10px; /* Espaciado entre elementos */
-    overflow: hidden; /* Evitar desbordes */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    background-color: #2C2F3F;
+    border: 1px solid #3B4C5A;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo del botón del acordeón */
 .accordion-button {
-    background-color: #2C2F3F; /* Fondo oscuro */
-    color: #FFFFFF; /* Texto blanco */
-    border: none; /* Sin bordes adicionales */
-    font-weight: bold; /* Negrita */
-    padding: 15px; /* Espaciado interno */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    background-color: #2C2F3F;
+    color: #FFFFFF;
+    border: none;
+    font-weight: bold;
+    padding: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover en el botón */
 .accordion-button:hover {
-    background-color: #3B5A77; /* Azul vibrante al hacer hover */
-    color: #FFFFFF; /* Mantener texto blanco */
+    background-color: #3B5A77;
+    color: #FFFFFF;
 }
 
-/* Botón activo (acordeón abierto) */
+/* Estilo para el botón del acordeón cuando está expandido (activo) */
+
 .accordion-button:not(.collapsed) {
-    /*background-color: #3B5A77; /* Azul al expandir */
-    color: #FFFFFF; /* Texto blanco */
-    box-shadow: inset 0 -2px 0 #FFFFFF; /* Efecto línea interna */
+    color: #FFFFFF;
+    box-shadow: inset 0 -2px 0 #FFFFFF;
 }
 
-/* Contenido del acordeón */
+/* Estilos del contenido dentro del acordeón */
+
 .accordion-body {
-    background-color: #35394A; /* Fondo gris oscuro */
-    color: #E0E0E0; /* Texto gris claro */
-    padding: 15px; /* Espaciado interno */
-    font-size: 0.95rem; /* Tamaño de texto */
-    line-height: 1.6; /* Espaciado entre líneas */
+    background-color: #35394A;
+    color: #E0E0E0;
+    padding: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Personaliza la flecha del botón del acordeón */
+
 .accordion-button::after {
     filter: brightness(0) invert(1); /* Convierte la flecha a blanco */
 }
@@ -483,170 +411,9 @@ footer .bi-youtube:hover {
     filter: brightness(0) invert(1); /* Mantiene la flecha blanca cuando está expandida */
 }
 
-/* Formulario */
+/* Estilos para el botón de "Subir al inicio" */
 
-.form-label {
-    font-weight: bold;
-    color: #333;  /* Color del texto de las etiquetas */
-}
-
-.form-control {
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 8px; /* Reducción de padding para hacer más pequeño el input */
-    font-size: 14px; /* Tamaño de fuente ligeramente más pequeño */
-}
-
-textarea.form-control {
-    font-size: 14px; /* Tamaño de fuente más pequeño en el textarea */
-}
-
-/* Estilos para el botón */
-.btn-custom-form {
-    display: inline-flex; /* Para centrar el contenido */
-    justify-content: center;
-    align-items: center;
-    padding: 8px 25px; /* Mantener tamaño pequeño pero adecuado */
-    font-size: 14px; /* Tamaño de fuente ajustado */
-    border: 2px solid #0069d9; /* Borde con color azul */
-    border-radius: 25px; /* Bordes redondeados */
-    background-color: #0069d9; /* Fondo azul */
-    color: white; /* Texto blanco */
-    text-transform: uppercase;
-    font-weight: 600; /* Texto más negrito */
-    transition: all 0.3s ease; /* Transición suave */
-    margin-top: 20px; /* Espacio superior */
-    width: auto; /* Ajustar el ancho del botón */
-    max-width: 200px; /* Limitar el ancho máximo */
-    display: block;
-    margin-left: auto; /* Centrar el botón horizontalmente */
-    margin-right: auto; /* Centrar el botón horizontalmente */
-}
-
-.btn-custom-form i {
-    margin-right: 8px; /* Espacio entre el ícono y el texto */
-}
-
-/* Efecto hover */
-.btn-custom-form:hover {
-    background-color: #0056b3; /* Fondo más oscuro en hover */
-    border-color: #0056b3; /* Borde más oscuro */
-    cursor: pointer; /* Cambia el cursor a mano */
-}
-
-/* Estilo cuando el botón está deshabilitado */
-.btn-custom-form:disabled {
-    background-color: #ccc;
-    border-color: #ccc;
-    color: #888;
-    cursor: not-allowed;
-}
-
-.form-row {
-    margin-bottom: 15px;
-}
-
-.invalid-feedback {
-    font-size: 0.9rem;
-    color: #dc3545;
-}
-
-.custom-select {
-    position: relative;
-    width: 100%;
-    max-width: 220px;
-    cursor: pointer;
-}
-
-.selected-option {
-    border: 1px solid #ced4da;
-    padding: 10px;
-    display: flex;
-    align-items: center; /* Centra la bandera y el texto verticalmente */
-    justify-content: space-between;
-    border-radius: 4px;
-    background-color: #fff;
-    gap: 10px; /* Espaciado entre la bandera y el texto */
-}
-
-.options-container {
-    position: absolute;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    border: 1px solid #ced4da;
-    background-color: #fff;
-    display: none;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-}
-
-.option {
-    padding: 10px;
-    display: flex;
-    align-items: center; /* Centra el texto verticalmente */
-    justify-content: start; /* Asegura que todo el contenido esté alineado a la izquierda */
-    gap: 10px; /* Espaciado entre la bandera y el texto */
-    cursor: pointer;
-}
-
-.option span:last-child {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente el texto */
-    align-items: center; /* Centra verticalmente el texto */
-    width: 100%; /* Hace que el texto ocupe todo el ancho disponible */
-    text-align: center; /* Centra el texto */
-}
-
-.option:hover {
-    background-color: #f8f9fa;
-}
-
-.flag-icon {
-    width: 20px;
-    height: 15px;
-    border-radius: 2px;
-    display: inline-block;
-}
-
-/* Galeria de imagenes */
-
-/*.galeria-grid {
-    display: grid;
-    grid-template-areas:
-        "area1 area2 area3"
-        "area4 area5 area3"
-        "area4 area6 area7"
-        "area8 area8 area9"
-        "area10 area11 area9"
-        "area10 area12 area13";
-    gap: 15px;
-    justify-content: center;
-}
-
-.galeria-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.galeria-grid .area1 { grid-area: area1; }
-.galeria-grid .area2 { grid-area: area2; }
-.galeria-grid .area3 { grid-area: area3; }
-.galeria-grid .area4 { grid-area: area4; }
-.galeria-grid .area5 { grid-area: area5; }
-.galeria-grid .area6 { grid-area: area6; }
-.galeria-grid .area7 { grid-area: area7; }
-.galeria-grid .area8 { grid-area: area8; }
-.galeria-grid .area9 { grid-area: area9; }
-.galeria-grid .area10 { grid-area: area10; }
-.galeria-grid .area11 { grid-area: area11; }
-.galeria-grid .area12 { grid-area: area12; }
-.galeria-grid .area13 { grid-area: area13; }*/
-
-  #scrollToTopBtn {
+#scrollToTopBtn {
     position: fixed;
     bottom: 20px;
     right: 20px; 
@@ -667,43 +434,14 @@ textarea.form-control {
     align-items: center;
 
     z-index: 2;
-  }
+}
   
-  #scrollToTopBtn:hover {
+#scrollToTopBtn:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  #whatsappBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px; /* Ajusta el tamaño */
-    height: 60px; /* Ajusta el tamaño */
-    background-color: #25D366; /* Color verde de WhatsApp */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px; /* Ajusta el tamaño del ícono */
-    visibility: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#whatsappBtn:hover {
-    transform: scale(1.1); /* Aumenta el tamaño en el hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-#whatsappBtn i {
-    font-size: 28px; /* Ajusta el tamaño del ícono */
-}
-
-
+/* Estilos específicos para pantallas grandes (max-width: 1200px) */
 
 @media screen and (max-width: 1200px) {
     .columna img {
@@ -714,23 +452,22 @@ textarea.form-control {
     }
 }
 
+/* Estilos específicos para pantallas medianas/grandes (max-width: 991px) */
+
 @media screen and (max-width: 991px) {
     .hero h1, .hero_galery h1, .hero_food h1, .hero_contact h1 {
-        font-size: 2.5rem; /* Ajuste intermedio, mayor que en pantallas pequeñas */
+        font-size: 2.5rem;
     }
-
     /* Estilo del subtítulo (h2) en pantallas de hasta 991px */
     .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
-        font-size: 1.3rem; /* Ajuste intermedio */
-        line-height: 1.4; /* Mantiene el espaciado adecuado */
-        padding: 0.4rem 1rem; /* Reduce ligeramente el padding */
+        font-size: 1.3rem;
+        line-height: 1.4;
+        padding: 0.4rem 1rem;
     }
-
-    /* Estilo del botón personalizado (btn-custom) en pantallas de hasta 991px */
     .btn-custom {
-        padding: 12px 25px; /* Ajuste el padding para pantallas medianas */
-        font-size: 1.1rem; /* Reduce un poco el tamaño de la fuente */
-        border-radius: 20px; /* Mantén un borde redondeado, pero no tan grande */
+        padding: 12px 25px; 
+        font-size: 1.1rem;
+        border-radius: 20px;
     }
     .columna img {
         width: 400px;
@@ -742,8 +479,10 @@ textarea.form-control {
         display: flex;
         flex-direction: column;
     }
-
 }
+
+/* Estilos específicos para pantallas medianas (max-width: 767px) */
+
 @media screen and (max-width: 767px) {
     .carousel-caption {
         padding: 0;
@@ -760,66 +499,49 @@ textarea.form-control {
         align-items: center;
     }
     .navbar .logo-img {
-        width: 80px; /* Reducir el tamaño del logo en pantallas pequeñas */
+        width: 80px;
       }
 }
 
+/* Estilos específicos para pantallas pequeñas (max-width: 576px) */
+
 @media screen and (max-width: 576px) {
     .navbar .logo-img {
-        width: 65px; /* Más pequeño en dispositivos más pequeños */
-      }
-
-      .navbar .navbar-nav .nav-link {
-        font-size: 1rem; /* Tamaño más pequeño */
-        padding: 0.2rem 0rem; /* Ajuste de padding */
+        width: 65px;
     }
-    /* Estilo del título (h1) */
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 0.2rem 0rem;
+    }
+
     .hero h1, .hero_galery h1, .hero_food h1, .hero_contact h1 {
-        font-size: 2rem; /* Reduce el tamaño del título */
+        font-size: 2rem;
     }
 
-    /* Estilo del subtítulo (h2) */
     .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
-        font-size: 1rem; /* Reduce el tamaño del subtítulo */
-        line-height: 1.3; /* Ajusta el espaciado entre líneas */
-        padding: 0.3rem 0.8rem; /* Ajusta el padding */
+        font-size: 1rem;
+        line-height: 1.3;
+        padding: 0.3rem 0.8rem;
     }
+
     .btn-custom {
-        padding: 10px 20px; /* Ajuste cómodo para pantallas pequeñas */
-        font-size: 1.05rem; /* Tamaño de fuente más pequeño (14px) */
-        border-radius: 20px; /* Reduce ligeramente el redondeo */
+        padding: 10px 20px;
+        font-size: 1.05rem;
+        border-radius: 20px;
     }
-    #contact-form {
-        margin: 0 15px;
-    }
-    .galeria-grid img {
-        width: 80%; /* Cambiado del 100% al 90% para hacerlas más pequeñas */
-        height: auto; /* Mantiene la proporción de la imagen */
-        object-fit: cover;
-        border-radius: 8px;
-        margin: 0 auto; /* Centra la imagen dentro de su contenedor */
-    }
+
     .desc-footer {
         text-align: center;
     }
+
     #footer {
         padding: 0 15px;
     }
+
     #galeria, #food {
         width: 92%;
         margin: 0 auto;
-    }
-    #contacto {
-        width: 95%;
-    }
-
-    #whatsappBtn {
-        width: 55px; /* Tamaño intermedio para pantallas pequeñas */
-        height: 55px; /* Tamaño intermedio para pantallas pequeñas */
-    }
-
-    #whatsappBtn i {
-        font-size: 23px; /* Tamaño intermedio del ícono */
     }
     
 }

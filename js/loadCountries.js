@@ -1,15 +1,52 @@
+const paises = [
+  { nombre: "Estados Unidos", codigo: "+1", iso: "us", idioma: "en", paisCode: "US", telefonoLongitud: 10 },
+  { nombre: "México", codigo: "+52", iso: "mx", idioma: "es", paisCode: "MX", telefonoLongitud: 10 },
+  { nombre: "España", codigo: "+34", iso: "es", idioma: "es", paisCode: "ES", telefonoLongitud: 9 },
+  { nombre: "Argentina", codigo: "+54", iso: "ar", idioma: "es", paisCode: "AR", telefonoLongitud: 10 }
+];
+
+const selectedOption = document.getElementById('selected-option');
+const optionsContainer = document.getElementById('options-container');
+const telefonoInput = document.getElementById('telefono');
+const feedback = telefonoInput.nextElementSibling;
+
+// Función global para validar la longitud del teléfono
+function validarLongitudTelefono() {
+  const codigoPaisSeleccionado = selectedOption.innerText.trim().split(" ")[0]; // Obtener solo el código de país
+  const country = paises.find(p => p.codigo === codigoPaisSeleccionado); // Buscar país según el código
+  const maxLength = country ? country.telefonoLongitud : 0;
+
+  // Comprobación de longitud
+  if (telefonoInput.value.length === 0) {
+     // Si el input está vacío
+     telefonoInput.classList.remove('is-invalid', 'is-valid');
+     telefonoInput.setCustomValidity("Este campo es obligatorio."); // Mensaje nativo para HTML5
+     feedback.textContent = 'Este campo es obligatorio.'; // Mensaje de error personalizado
+     feedback.classList.add('invalid-feedback'); // Añadir la clase invalid-feedback
+     feedback.style.fontWeight = 'bold';
+     feedback.style.display = 'block'; // Mostrar el mensaje de error
+  } else if (telefonoInput.value.length !== maxLength) {
+    // Si el input no cumple con la longitud
+    telefonoInput.classList.add('is-invalid');
+    telefonoInput.classList.remove('is-valid');
+    telefonoInput.setCustomValidity(`El número debe tener ${maxLength} caracteres.`);
+    feedback.textContent = `El número debe tener ${maxLength} caracteres.`; // Mensaje de error personalizado
+    feedback.classList.add('invalid-feedback');
+    feedback.style.fontWeight = 'bold';
+    feedback.style.display = 'block'; // Mostrar el mensaje de error
+  } else {
+    // Si el input es válido
+    telefonoInput.classList.remove('is-invalid');
+    telefonoInput.classList.add('is-valid');
+    telefonoInput.setCustomValidity(''); // Eliminar mensajes de error
+    feedback.textContent = ''; // Limpiar el mensaje
+    feedback.style.display = 'none'; // Ocultar el mensaje de error
+    feedback.classList.remove('invalid-feedback');
+  }
+}
+
+// Lógica dentro de DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
-  const paises = [
-    { nombre: "Estados Unidos", codigo: "+1", iso: "us", idioma: "en", paisCode: "US", telefonoLongitud: 10 },
-    { nombre: "México", codigo: "+52", iso: "mx", idioma: "es", paisCode: "MX", telefonoLongitud: 10 },
-    { nombre: "España", codigo: "+34", iso: "es", idioma: "es", paisCode: "ES", telefonoLongitud: 9 },
-    { nombre: "Argentina", codigo: "+54", iso: "ar", idioma: "es", paisCode: "AR", telefonoLongitud: 10 }
-  ];
-
-  const selectedOption = document.getElementById('selected-option');
-  const optionsContainer = document.getElementById('options-container');
-  const telefonoInput = document.getElementById('telefono');
-
   // Generar opciones dinámicamente
   paises.forEach(pais => {
     const optionDiv = document.createElement('div');
@@ -25,9 +62,15 @@ document.addEventListener('DOMContentLoaded', function () {
       selectedOption.innerHTML = optionDiv.innerHTML;
       optionsContainer.style.display = 'none'; // Cerrar el menú
 
-      // Actualizar el maxlength del campo de teléfono según el país seleccionado
+      // Obtener el país seleccionado
       const country = paises.find(p => p.iso === pais.iso);
+      
+      // Actualizar el maxlength del campo de teléfono según el país seleccionado
       telefonoInput.maxLength = country.telefonoLongitud;
+
+      if (telefonoInput.value.length > 0) {
+        validarLongitudTelefono();
+      }
     });
   });
 
@@ -46,8 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Determinar el país predeterminado según el idioma y país del navegador
   const idiomaNavegador = navigator.language || navigator.languages[0]; // Ejemplo: "es-ES" o "es-MX"
-  
-  // Intentar obtener el código de país del idioma del navegador (por ejemplo, "ES" de "es-ES")
   const codigoPaisNavegador = idiomaNavegador.split('-')[1]; // Si el idioma es "es-ES", toma "ES"
   
   // Buscar país en la lista usando tanto idioma como código de país
@@ -65,7 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Actualizar el maxlength del campo de teléfono según el país predeterminado
     telefonoInput.maxLength = paisPredeterminado.telefonoLongitud;
   } else {
-    // Si no se encuentra coincidencia exacta, puedes manejar el caso aquí
     console.log("No se encontró coincidencia exacta para el idioma y país");
   }
+
+  // Asignar validación de longitud de teléfono a eventos
+  telefonoInput.addEventListener('blur', validarLongitudTelefono);
+  telefonoInput.addEventListener('input', validarLongitudTelefono);
 });

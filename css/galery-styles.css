@@ -1,9 +1,12 @@
+/* Estilos para la galeria */
+
 /* Estilos generales para la galería */
 .galeria-seccion {
-    background-color: #f8f9fa;  /* Fondo claro para la sección */
+    background-color: #f8f9fa;
     padding: 50px 0;
 }
 
+/* Título de la galería */
 .galeria-seccion h2 {
     font-size: 2.5rem;  /* Tamaño grande para el título */
     color: #333;  /* Color oscuro para el título */
@@ -11,7 +14,8 @@
     margin-bottom: 30px;
 }
 
-/* Contenedor principal de la galería */
+/* Estilos para la disposición y formato de la galería de imágene */
+
 .galeria {
     display: flex;
     justify-content: center;
@@ -56,21 +60,21 @@
 .galeria-grid .area12 { grid-area: area12; }
 .galeria-grid .area13 { grid-area: area13; }
 
-/* Estilo para la card */
+/* Estilos para las cards de la galería */
+
 .card-galery {
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
-    background-color: #fff; /* Fondo blanco por defecto */
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Aumentamos la sombra */
+    background-color: #fff;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* Efecto de hover */
 .card-galery:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25); /* Sombra más fuerte al hacer hover */
-    background-color: transparent; /* Fondo transparente al hacer hover */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
 }
 
 /* Estilo para la imagen */
@@ -104,23 +108,17 @@
     font-size: 18px;
     line-height: 1.5;
     text-transform: capitalize;
-    transition: color 0.3s ease; /* Transición suave para el color del texto */
+    transition: color 0.3s ease;
 }
 
-/* Cambiar color del texto a negro al hacer hover */
 .card-galery:hover .card-text {
-    color: #000; /* Texto negro al hacer hover */
+    color: #000;
 }
 
-/* Estilos adicionales para que las cards se vean mejor al redimensionar */
-/*@media (max-width: 767px) {
-    .card-galery {
-        width: 90%;
-    }
-}*/
+/* Estilos específicos para pantallas medianas/grandes (max-width: 991px) */
 
 @media screen and (max-width: 991px) {
-
+    
     .galeria-grid {
         grid-template-areas:
         "area1 area2"
@@ -133,6 +131,8 @@
     }
 
 }
+
+/* Estilos específicos para pantallas pequeñas (max-width: 576px) */
 
 @media screen and (max-width: 576px) {
     .galeria-grid {
@@ -151,9 +151,17 @@
             "area12"
             "area13";
     }
+
+    .galeria-grid img {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+
     #galeria {
         width: 92%;
         margin: 0 auto;
     }
-    
 }

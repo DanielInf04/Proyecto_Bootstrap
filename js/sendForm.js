@@ -1,22 +1,54 @@
 function showModal(event) {
-  event.preventDefault(); // Evita el envío del formulario
-  
-  // Validar el formulario
+  event.preventDefault();
+
   var form = document.getElementById('contact-form');
-  
-  // Si el formulario es válido, mostramos el modal
+  var fechaInput = document.getElementById('fecha');
+
+  var fechaActual = new Date().toISOString().split('T')[0];
+
+  // Validamos la longitud del teléfono
+  validarLongitudTelefono();
+
+  // Validar si la fecha seleccionada es menor a la actual
+  if (fechaInput.value < fechaActual) {
+    fechaInput.classList.add('is-invalid');
+    fechaInput.classList.remove('is-valid');
+
+    var feedback = fechaInput.nextElementSibling;
+    feedback.textContent = "La fecha no puede ser menor a hoy.";
+    feedback.computedStyleMap.display = "block";
+    return;
+  } else {
+    // Quitar el error si la fecha es válida
+    fechaInput.classList.remove('is-invalid');
+    fechaInput.classList.add('is-valid');
+  }
+
+  // Si el formulario es válido, muestra el modal
   if (form.checkValidity()) {
+    // Quita cualquier marca de error previa
+    form.classList.remove('was-validated');
+
+    // Muestra el modal
     var myModal = new bootstrap.Modal(document.getElementById('modalSuccess'), {
-      keyboard: false
+      keyboard: false,
     });
     myModal.show();
-    
-    // Limpiamos el formulario después de un breve retraso
-    setTimeout(function() {
-      form.reset(); // Limpiar el formulario después de mostrar el modal
-    }, 1000); // Retraso de 1 segundo para no limpiar antes de que el modal se muestre
+
+    // Limpia el formulario después de mostrar el modal
+    setTimeout(function () {
+      form.reset();
+
+      // Ponemos por defecto la fecha de hoy
+      fechaInput.value = fechaActual;
+
+      // Eliminamos los estilos de validación después del reinicio
+      form.querySelectorAll('.is-valid, .is-invalid').forEach(function (input) {
+        input.classList.remove('is-valid', 'is-invalid');
+      });
+    }, 1000);
   } else {
-    // Si el formulario no es válido, mostramos la validación visual
+    // Añade la clase para mostrar mensajes de error
     form.classList.add('was-validated');
   }
 }
