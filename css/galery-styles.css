@@ -152,14 +152,6 @@
             "area13";
     }
 
-    .galeria-grid img {
-        width: 80%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 8px;
-        margin: 0 auto;
-    }
-
     #galeria {
         width: 92%;
         margin: 0 auto;
