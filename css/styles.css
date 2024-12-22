@@ -456,8 +456,8 @@ footer .bi-youtube:hover {
 
 @media (max-width: 1024px) and (orientation: landscape) {
     .navbar-collapse {
-        max-height: 100vh; /* Limita la altura a la altura total de la ventana */
-        overflow-y: auto;  /* Permite desplazamiento vertical */
+        max-height: 80vh;
+        overflow-y: auto;
     }
 }
 
