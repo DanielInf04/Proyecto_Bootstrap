@@ -216,7 +216,11 @@ img.rounded {
 }
 
 /* Turismo */
-.turismo {
+/*.turismo {
+    padding: 20px;
+}*/
+
+#turismo {
     padding: 20px;
 }
 
