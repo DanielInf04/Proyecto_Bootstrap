@@ -30,9 +30,9 @@ body, html {
 }
 
 /* Corrección visual del contenido al presionar un enlace */
-html {
-    scroll-padding-top: 115px;
-}
+/*html {
+    scroll-padding-top: 95px;
+}*/
 
 /* Estilos generales */
 
