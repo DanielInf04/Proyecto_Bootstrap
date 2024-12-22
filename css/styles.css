@@ -456,7 +456,7 @@ footer .bi-youtube:hover {
 
 /* Estilos específicos para tablets (max-width: 1000px) and (max-height: 500px) */
 
-@media screen and (max-width: 1000px) and (max-height: 500px) {
+@media screen and (max-width: 1000px) and (max-height: 1500px) {
     .navbar {
         border-bottom: 1px solid black;
     }
