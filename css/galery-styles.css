@@ -9,7 +9,7 @@
 /* Título de la galería */
 .galeria-seccion h2 {
     font-size: 2.5rem;  /* Tamaño grande para el título */
-    color: #333;  /* Color oscuro para el título */
+    color: var(--t-primary);  /* Color oscuro para el título */
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -67,13 +67,13 @@
     border-radius: 12px;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 30px var(--sw-tertiary);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .card-galery:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 35px var(--sw-secondary);
     background-color: transparent;
 }
 
@@ -103,7 +103,7 @@
 /* Texto de la card */
 .card-text {
     font-size: 16px;
-    color: #000 !important;
+    color: var(--secondary) !important;
     font-weight: 600;
     font-size: 18px;
     line-height: 1.5;
@@ -112,7 +112,7 @@
 }
 
 .card-galery:hover .card-text {
-    color: #000;
+    color: var(--secondary);
 }
 
 /* Estilos específicos para pantallas medianas/grandes (max-width: 991px) */

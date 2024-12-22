@@ -1,4 +1,36 @@
 /* Estilos Generales */
+:root {
+    /* Colores */
+    --primary: #fff;
+    --secondary: #000;
+
+    /* Titulos */
+    --t-primary: #333;
+
+    /* Botones */
+    --btn-primary: #0069d9;
+    --btn-primary-hv: #0056b3;
+    --btn-secondary-hv: #00aaff;
+
+    /* Background */
+    --bg-primary: #f8f9fa;
+
+    /* Degradado */
+    --bg-dark-1: #1b1b32;
+    --bg-dark-2: #33354a;
+
+    /* Sombra */
+    --sw-primary: rgba(0, 0, 0, 0.3);
+    --sw-secondary: rgba(0, 0, 0, 0.25);
+    --sw-tertiary: rgba(0, 0, 0, 0.2);
+    --sw-little: rgba(0, 0, 0, 0.1);
+
+    /* Redes Sociales */
+    --facebook: #4267B2;
+    --instagram: #C13584;
+    --twitter: #1DA1F2;
+    --youtube: #FF0000;
+}
 
 * {
     font-family: "Poppins", serif;
@@ -9,12 +41,12 @@ body, html {
 }
 
 .seccion-clara {
-    color: black;
-    background-color: white;
+    color: var(--secondary);
+    background-color: var(--primary);
 }
 
 .seccion-oscura {
-    color: white;
+    color: var(--primary);
     background-color: #1b1b32;
 }
 
@@ -32,7 +64,7 @@ body, html {
 .texto-blanco {
     font-size: 1rem;
     width: 90%;
-    color: white !important;
+    color: var(--primary) !important;
 }
 
 /* Estilo general de las Cards */
@@ -50,9 +82,9 @@ body, html {
 
 .card:hover {
     background-color: rgb(6, 55, 128);
-    color: white;
+    color: var(--primary);
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px var(--sw-tertiary);
 }
 
 /* Estilos para las imágenes dentro de las cards */
@@ -77,11 +109,15 @@ body, html {
 /* Estilos para el cuerpo de la card y el botón */
 
 .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .card-body > .btn-primary {
-    background-color: #0069d9;
+    background-color: var(--btn-primary);
     border: none;
     padding: 10px 20px;
     border-radius: 25px;
@@ -89,14 +125,14 @@ body, html {
 }
 
 .card-body .btn-primary:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--btn-primary-hv);
+    box-shadow: 0 4px 8px var(--sw-tertiary);
 }
 
 /* Barra de navegación */
 .navbar {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary);
+    box-shadow: 0 4px 8px var(--sw-tertiary);
     backdrop-filter: blur(5px);
 }
 
@@ -107,13 +143,13 @@ body, html {
 
 .navbar-nav .nav-item .nav-link {
     font-size: 1.05rem;
-    color: black;
+    color: var(--secondary);
     transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item .nav-link.active {
-    color: #0056b3;
+    color: var(--btn-primary-hv);
 }
 
 .logo-img {
@@ -130,7 +166,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--primary);
     position: relative;
     padding-top: 70px;
 }
@@ -182,7 +218,7 @@ body, html {
  .hero h2, .hero_galery h2, .hero_food h2, .hero_contact h2 {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #fff;
+    color: var(--primary);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     line-height: 1.4;
     text-align: center;
@@ -202,8 +238,8 @@ body, html {
 
 .btn-custom {
     font-family: "Poppins", serif;
-    background-color: #0056b3;
-    color: white;
+    background-color: var(--btn-primary-hv);
+    color: var(--primary);
     font-weight: bold;
     border-radius: 25px;
     padding: 12px 30px;
@@ -211,22 +247,22 @@ body, html {
 }
 
 .btn-custom:hover {
-    background-color: #00aaff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: var(--btn-secondary-hv);
+    box-shadow: 0 4px 12px var(--sw-tertiary);
     transform: translateY(-3px);
 }
 
 .btn-custom:active {
-    background-color: #0056b3;
+    background-color: var(--btn-primary-hv);
     transform: translateY(1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px var(--sw-tertiary);
 }
 
 /* Estilos generales para el pie de página (footer) */
 
 footer {
     min-height: 500px;
-    background: linear-gradient(135deg, #1b1b32, #33354a); /* Fondo degradado */
+    background: linear-gradient(135deg, var(--bg-dark-1), var(--bg-dark-2));
 }
 
 footer h5 {
@@ -238,7 +274,7 @@ footer h5 {
 /* Estilos generales para los enlaces dentro del footer */
 
 footer a {
-    color: white;
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -273,42 +309,42 @@ footer a:hover {
     justify-content: center;
     padding: 2px;
     margin: 10px;
-    border: 2px solid white;
+    border: 2px solid var(--primary);
     border-radius: 50%;
     transition: all 0.2s ease-in;
 }
 
 .iconos-redes-sociales i {
-    color: white;
+    color: var(--primary);
     font-size: 1.5rem;
     transition: all 0.2s ease-in;
 }
 
 .iconos-redes-sociales a:hover {
-    background-color: white;
+    background-color: var(--primary);
     border: 2px solid rgb(13, 110, 253);
 }
 
 .iconos-redes-sociales a:hover i {
-    color: black;
+    color: var(--secondary);
 }
 
 /* Colores específicos para cada Red Social */
 
 footer .bi-facebook {
-    color: #4267B2;
+    color: var(--facebook);
 }
 
 footer .bi-instagram {
-    color: #C13584;
+    color: var(--instagram);
 }
 
 footer .bi-twitter-x {
-    color: #1DA1F2;
+    color: var(--twitter);
 }
 
 footer .bi-youtube {
-    color: #FF0000;
+    color: var(--youtube);
 }
 
 /* Hover específico para cada Red Social */
@@ -322,19 +358,19 @@ footer .bi-youtube:hover {
 }
 
 footer .bi-facebook:hover {
-    color: #3b5998;
+    color: var(--facebook);
 }
 
 footer .bi-instagram:hover {
-    color: #E1306C; 
+    color: var(--instagram); 
 }
 
 footer .bi-twitter-x:hover {
-    color: #1DA1F2;
+    color: var(--twitter);
 }
 
 footer .bi-youtube:hover {
-    color: #FF0000;
+    color: var(--youtube);
 }
 
 /* Estilos para derechos de autor */
@@ -350,7 +386,7 @@ footer .bi-youtube:hover {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.1rem;
-    color: #ffffff;
+    color: var(--primary);
     background-color: #2b2e38;
     border: none;
     transition: background-color 0.3s ease;
@@ -366,12 +402,12 @@ footer .bi-youtube:hover {
     border-radius: 5px;
     margin-bottom: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px var(--sw-primary);
 }
 
 .accordion-button {
     background-color: #2C2F3F;
-    color: #FFFFFF;
+    color: var(--primary);
     border: none;
     font-weight: bold;
     padding: 15px;
@@ -380,14 +416,14 @@ footer .bi-youtube:hover {
 
 .accordion-button:hover {
     background-color: #3B5A77;
-    color: #FFFFFF;
+    color: var(--primary);
 }
 
 /* Estilo para el botón del acordeón cuando está expandido (activo) */
 
 .accordion-button:not(.collapsed) {
-    color: #FFFFFF;
-    box-shadow: inset 0 -2px 0 #FFFFFF;
+    color: var(--primary);
+    box-shadow: inset 0 -2px 0 var(--primary);
 }
 
 /* Estilos del contenido dentro del acordeón */
@@ -420,10 +456,10 @@ footer .bi-youtube:hover {
     width: 50px;
     height: 50px;
     background: linear-gradient(45deg, #007bff, #6c63ff);
-    color: white;
+    color: var(--primary);
     border: none;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px var(--sw-tertiary);
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -438,7 +474,7 @@ footer .bi-youtube:hover {
   
 #scrollToTopBtn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 10px var(--sw-primary);
 }
 
 /* Estilos específicos para pantallas grandes (max-width: 1200px) */
@@ -465,7 +501,7 @@ footer .bi-youtube:hover {
 
 @media screen and (max-width: 1000px) and (max-height: 500px) {
     .navbar {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid var(--secondary);
     }
 
     .navbar .logo-img {
@@ -549,7 +585,7 @@ footer .bi-youtube:hover {
 
 @media screen and (max-width: 576px) {
     .navbar {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid var(--secondary);
     }
 
     .navbar .logo-img {

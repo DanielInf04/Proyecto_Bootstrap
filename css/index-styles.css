@@ -39,12 +39,12 @@ img.rounded {
     border-radius: 15px;
     padding: 15px;
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px var(--sw-primary);
     backdrop-filter: blur(5px);
 }
 
 .carousel-indicators button {
-    background-color: #fff;
+    background-color: var(--primary);
 }
 
 /* Estilos para la Sección Atractivos Turísticos */
@@ -69,4 +69,12 @@ img.rounded {
     right: 15px;
     z-index: 1;
     font-weight: bold;
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+    .historia .columna img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
