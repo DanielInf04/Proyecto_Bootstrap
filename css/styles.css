@@ -454,9 +454,16 @@ footer .bi-youtube:hover {
     }
 }
 
+@media (max-width: 1024px) and (orientation: landscape) {
+    .navbar-collapse {
+        max-height: 100vh; /* Limita la altura a la altura total de la ventana */
+        overflow-y: auto;  /* Permite desplazamiento vertical */
+    }
+}
+
 /* Estilos específicos para tablets (max-width: 1000px) and (max-height: 500px) */
 
-@media screen and (max-width: 1000px) and (max-height: 1500px) {
+@media screen and (max-width: 1000px) and (max-height: 500px) {
     .navbar {
         border-bottom: 1px solid black;
     }
