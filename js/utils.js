@@ -1,16 +1,3 @@
-window.onload = function() {
-  // Ajusta la altura de .hero-principal cuando la página se carga
-  adjustHeroHeight();
-
-  // También ajusta la altura cada vez que la ventana cambia de tamaño (resize)
-  window.addEventListener('resize', adjustHeroHeight);
-}
-
-function adjustHeroHeight() {
-  const hero = document.querySelector('.hero-principal');
-  hero.style.height = `${window.innerHeight}px`;
-}
-
 // Script para cerrar el acordeón al cambiar de página
 document.addEventListener('DOMContentLoaded', function () {
     // Cerrar todas las secciones del acordeón al cargar la página
