@@ -76,8 +76,7 @@ textarea.form-control {
 /* Estilos para el select */
 .custom-select {
     position: relative;
-    width: 100%;
-    max-width: 220px;
+    width: 220px;
     cursor: pointer;
 }
 
@@ -167,6 +166,12 @@ textarea.form-control {
 
 #whatsappBtn i {
     font-size: 28px;
+}
+
+@media screen and (max-width: 991px) {
+    .custom-select {
+        width: auto;
+    }
 }
 
 /* Estilos específicos para pantallas pequeñas (max-width: 576px) */
