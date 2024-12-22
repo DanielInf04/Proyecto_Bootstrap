@@ -105,6 +105,10 @@ body, html {
     gap: 2rem;
 }
 
+.nav-item:last-child {
+    padding-bottom: 15px;
+}
+
 .navbar-nav .nav-item .nav-link {
     font-size: 1.05rem;
     color: black;
@@ -506,6 +510,10 @@ footer .bi-youtube:hover {
 /* Estilos específicos para pantallas pequeñas (max-width: 576px) */
 
 @media screen and (max-width: 576px) {
+    .navbar {
+        border-bottom: 1px solid black;
+    }
+
     .navbar .logo-img {
         width: 65px;
     }
