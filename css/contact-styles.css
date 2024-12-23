@@ -190,6 +190,10 @@ textarea.form-control {
 
 @media screen and (max-width: 576px) {
     
+    #contacto {
+        width: 95%;
+    }
+
     #contact-form {
         margin: 0 15px;
     }
