@@ -2,6 +2,7 @@ function showModal(event) {
   event.preventDefault();
 
   var form = document.getElementById('contact-form');
+  var nombreInput = document.getElementById('nombre');
   var fechaInput = document.getElementById('fecha');
 
   var fechaActual = new Date().toISOString().split('T')[0];
@@ -29,6 +30,12 @@ function showModal(event) {
     // Quita cualquier marca de error previa
     form.classList.remove('was-validated');
 
+    var nombreUsuario = nombreInput.value;
+
+    // Añadimos el nombre al modal
+    var modalMensaje = document.getElementById('modalMensaje');
+    modalMensaje.style.fontSize = '1.2rem';
+    modalMensaje.innerHTML = `Gracias, ${nombreUsuario}! Tu mensaje ha sido enviado con éxito. Te responderemos lo antes posible.`;
     // Muestra el modal
     var myModal = new bootstrap.Modal(document.getElementById('modalSuccess'), {
       keyboard: false,

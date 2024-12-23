@@ -26,6 +26,53 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(function(item) {
     });
 });
 
+// Función para validar el nombre
+function validarNombre() {
+  const nombreInput = document.getElementById('nombre');
+  const feedback = nombreInput.nextElementSibling; // Mensaje de error
+
+  if (nombreInput.value.trim().length === 0) {
+      // Si el campo está vacío
+      nombreInput.classList.remove('is-valid');
+      nombreInput.classList.add('is-invalid');
+      feedback.textContent = 'Por favor, ingresa tu nombre completo.';
+      feedback.style.display = 'block';
+  } else {
+      // Si el campo tiene valor válido
+      nombreInput.classList.remove('is-invalid');
+      nombreInput.classList.add('is-valid');
+      feedback.textContent = '';
+      feedback.style.display = 'none';
+  }
+}
+
+// Función para validar el correo electrónico
+function validarEmail() {
+  const emailInput = document.getElementById('email');
+  const feedback = emailInput.nextElementSibling; // Mensaje de error
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; // Expresión regular para validar el correo
+
+  if (emailInput.value.trim().length === 0) {
+      // Si el campo está vacío
+      emailInput.classList.remove('is-valid');
+      emailInput.classList.add('is-invalid');
+      feedback.textContent = 'Por favor, ingresa un correo electrónico válido.';
+      feedback.style.display = 'block';
+  } else if (!emailPattern.test(emailInput.value.trim())) {
+      // Si el correo no es válido
+      emailInput.classList.remove('is-valid');
+      emailInput.classList.add('is-invalid');
+      feedback.textContent = 'Por favor, ingresa un correo electrónico válido.';
+      feedback.style.display = 'block';
+  } else {
+      // Si el correo es válido
+      emailInput.classList.remove('is-invalid');
+      emailInput.classList.add('is-valid');
+      feedback.textContent = '';
+      feedback.style.display = 'none';
+  }
+}
+
 function limpiarFormulario() {
     // Resetea el formulario
     document.getElementById('contact-form').reset();

@@ -71,6 +71,8 @@ img.rounded {
     font-weight: bold;
 }
 
+/* Estilos específicos para pantallas medianas a grandes (entre 992px y 1400px de ancho) */
+
 @media (min-width: 992px) and (max-width: 1400px) {
     .historia .columna img {
         width: 100%;

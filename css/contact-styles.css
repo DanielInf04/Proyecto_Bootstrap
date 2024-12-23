@@ -157,6 +157,7 @@ textarea.form-control {
     font-size: 25px;
     visibility: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
 }
 
 #whatsappBtn:hover {
@@ -174,12 +175,9 @@ textarea.form-control {
     }
 }
 
-/* Estilos específicos para pantallas pequeñas (max-width: 576px) */
+/* Estilos específicos para pantallas pequeñas (hasta 576px de ancho) */
 
 @media screen and (max-width: 576px) {
-    #contacto {
-        width: 95%;
-    }
     
     #contact-form {
         margin: 0 15px;

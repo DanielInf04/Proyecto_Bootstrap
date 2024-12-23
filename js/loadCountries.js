@@ -1,5 +1,5 @@
 const paises = [
-  { nombre: "Estados Unidos", codigo: "+1", iso: "us", idioma: "en", paisCode: "US", telefonoLongitud: 10 },
+  { nombre: "EEUU", codigo: "+1", iso: "us", idioma: "en", paisCode: "US", telefonoLongitud: 10 },
   { nombre: "México", codigo: "+52", iso: "mx", idioma: "es", paisCode: "MX", telefonoLongitud: 10 },
   { nombre: "España", codigo: "+34", iso: "es", idioma: "es", paisCode: "ES", telefonoLongitud: 9 },
   { nombre: "Argentina", codigo: "+54", iso: "ar", idioma: "es", paisCode: "AR", telefonoLongitud: 10 }
@@ -15,9 +15,12 @@ function validarLongitudTelefono() {
   const codigoPaisSeleccionado = selectedOption.innerText.trim().split(" ")[0]; // Obtener solo el código de país
   const country = paises.find(p => p.codigo === codigoPaisSeleccionado); // Buscar país según el código
   const maxLength = country ? country.telefonoLongitud : 0;
+  
+  // Eliminamos los espacios para la validación
+  const telefonoValorSinEspacios = telefonoInput.value.replace(/\s+/g, '');
 
   // Comprobación de longitud
-  if (telefonoInput.value.length === 0) {
+  if (telefonoValorSinEspacios.length === 0) {
      // Si el input está vacío
      telefonoInput.classList.remove('is-invalid', 'is-valid');
      telefonoInput.setCustomValidity("Este campo es obligatorio."); // Mensaje nativo para HTML5
@@ -25,7 +28,16 @@ function validarLongitudTelefono() {
      feedback.classList.add('invalid-feedback'); // Añadir la clase invalid-feedback
      feedback.style.fontWeight = 'bold';
      feedback.style.display = 'block'; // Mostrar el mensaje de error
-  } else if (telefonoInput.value.length !== maxLength) {
+  } else if (telefonoValorSinEspacios && !/^\d+$/.test(telefonoValorSinEspacios)) {
+    // Comprobación de que el valor solo contenga números
+    telefonoInput.classList.add('is-invalid');
+    telefonoInput.classList.remove('is-valid');
+    telefonoInput.setCustomValidity('El teléfono debe contener solo números.');
+    feedback.textContent = 'El teléfono debe contener solo números.';
+    feedback.classList.add('invalid-feedback');
+    feedback.style.fontWeight = 'bold';
+    feedback.style.display = 'block';
+  } else if (telefonoValorSinEspacios.length !== maxLength) {
     // Si el input no cumple con la longitud
     telefonoInput.classList.add('is-invalid');
     telefonoInput.classList.remove('is-valid');
@@ -42,6 +54,40 @@ function validarLongitudTelefono() {
     feedback.textContent = ''; // Limpiar el mensaje
     feedback.style.display = 'none'; // Ocultar el mensaje de error
     feedback.classList.remove('invalid-feedback');
+
+    // Formatear el número de teléfono
+    telefonoInput.value = formatearTelefono(telefonoValorSinEspacios, codigoPaisSeleccionado);
+  }
+}
+
+// Función para formatear el número de teléfono según el país
+function formatearTelefono(numero, codigoPais) {
+  // Eliminamos todo lo que no sea un número
+  numero = numero.replace(/\D/g, '');
+
+  // Buscamos el país seleccionado
+  const pais = paises.find(p => p.codigo === codigoPais);
+  if (!pais) return numero; // Si no encontramos el país, devolvemos el número sin cambios
+
+  switch (pais.paisCode) {
+    case "US":
+      // Formato de EE.UU: (555) 123-4567
+      return numero.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+    case "ES":
+      // Formato de España: 66 123 45 67
+      return numero.replace(/(\d{2})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
+    case "MX":
+      // Formato de México: 55 1234 5678
+      return numero.replace(/(\d{2})(\d{4})(\d{4})/, '$1 $2 $3');
+    case "AR":
+      // Formato de Argentina: 011 15 1234 5678 o +54 9 11 1234 5678
+      if (numero.length === 10) {
+        return numero.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, '$1 $2 $3 $4');
+      } else {
+        return numero.replace(/(\d{2})(\d{1})(\d{1})(\d{4})(\d{4})/, '$1 $2 $3 $4 $5');
+      }
+    default:
+      return numero;
   }
 }
 
@@ -108,6 +154,14 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     console.log("No se encontró coincidencia exacta para el idioma y país");
   }
+
+  // Asignar validación de longitud y formato a los campos de nombre y correo
+  document.getElementById('nombre').addEventListener('input', function() {
+    validarNombre();
+  });
+  document.getElementById('email').addEventListener('input', function() {
+    validarEmail();
+  });
 
   // Asignar validación de longitud de teléfono a eventos
   telefonoInput.addEventListener('blur', validarLongitudTelefono);

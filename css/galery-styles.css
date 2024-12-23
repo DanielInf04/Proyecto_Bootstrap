@@ -115,7 +115,7 @@
     color: var(--secondary);
 }
 
-/* Estilos específicos para pantallas medianas/grandes (max-width: 991px) */
+/* Estilos específicos para pantallas medianas (hasta 991px de ancho) */
 
 @media screen and (max-width: 991px) {
     
@@ -132,7 +132,7 @@
 
 }
 
-/* Estilos específicos para pantallas pequeñas (max-width: 576px) */
+/* Estilos específicos para pantallas pequeñas (hasta 576px de ancho) */
 
 @media screen and (max-width: 576px) {
     .galeria-grid {
