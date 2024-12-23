@@ -1,5 +1,11 @@
 /* Estilos para el formulario */
 
+/* Estilos para la Sección Contacto */
+#contacto {
+    width: 75%;
+    margin: 0 auto;
+}
+
 /* Estilos generales de etiquetas del formulario */
 .form-label {
     font-weight: bold;
@@ -169,7 +175,12 @@ textarea.form-control {
     font-size: 28px;
 }
 
+/* Estilos específicos para pantallas pequeñas a medianas (hasta 991px de ancho) */
+
 @media screen and (max-width: 991px) {
+    #contacto {
+        width: 90%;
+    }
     .custom-select {
         width: auto;
     }
